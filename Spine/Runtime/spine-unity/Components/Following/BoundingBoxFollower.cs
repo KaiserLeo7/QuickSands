@@ -41,6 +41,7 @@ namespace Spine.Unity {
 	#else
 	[ExecuteInEditMode]
 	#endif
+	[HelpURL("http://esotericsoftware.com/spine-unity#BoundingBoxFollower")]
 	public class BoundingBoxFollower : MonoBehaviour {
 		internal static bool DebugMessages = true;
 
@@ -177,6 +178,9 @@ namespace Spine.Unity {
 		void OnDisable () {
 			if (clearStateOnDisable)
 				ClearState();
+
+			if (skeletonRenderer != null)
+				skeletonRenderer.OnRebuild -= HandleRebuild;
 		}
 
 		public void ClearState () {
