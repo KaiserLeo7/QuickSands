@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Location 
-
-{
+public class Location {
 private string name;
 private double lattitude;
 private double longtitude;
 
+    public Location(string name, double lattitude, double longtitude) {
+        this.name = name;
+        this.lattitude = lattitude;
+        this.longtitude = longtitude;
+    }
 
-public string Name {
+    public string Name {
     get
     {
         return name;
@@ -47,11 +50,6 @@ public double Longtitude
     }
 }
 
-public Location (string name, double lattitude, double longtitude)
-{
-    this.name = name;
-    this.lattitude = lattitude;
-    this.longtitude = longtitude;
-}
+
 
 }
