@@ -36,6 +36,8 @@ public double Width
 
 public Map (double height, double width, string name, double lattitude, double longtitude) 
 {
+    this.height = height;
+    this.width = width;
     location = new Location(name, lattitude, longtitude);
 }
 

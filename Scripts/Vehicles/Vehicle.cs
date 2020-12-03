@@ -12,7 +12,7 @@ public class Vehicle
     private int damage;
     private double weight;
 
-    public Name
+    public string Name
     {
         get
         {
@@ -24,7 +24,7 @@ public class Vehicle
             name = value;
         }
     }
-    public Health
+    public int Health
     {
         get
         {
@@ -37,7 +37,7 @@ public class Vehicle
         }
     }
 
-    public Armour
+    public int Armour
     {
         get
         {
@@ -50,7 +50,7 @@ public class Vehicle
         }
     }
 
-    public Speed
+    public double Speed
     {
         get
         {
@@ -63,7 +63,7 @@ public class Vehicle
         }
     }
 
-    public ButtSpace
+    public int ButtSpace
     {
         get
         {
@@ -76,7 +76,7 @@ public class Vehicle
         }
     }
 
-    public Damage
+    public int Damage
     {
         get
         {
@@ -89,7 +89,7 @@ public class Vehicle
         }
     }
 
-    public Weight
+    public double Weight
     {
         get
         {
@@ -102,6 +102,15 @@ public class Vehicle
         }
     }
 
-    public Vehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight){};
+    public Vehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight)
+    {
+        this.name = name;
+        this.health = health;
+        this.armour = armour;
+        this.speed = speed;
+        this.buttSpace = buttSpace;
+        this.damage = damage;
+        this.weight = weight;
+    }
 
 }
