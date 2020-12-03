@@ -873,7 +873,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 121032933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d29499fa60e774c8a6879f3219e0c3, type: 3}
+  m_Script: {fileID: 11500000, guid: f057f2a486fcb954db2ad86a0b8bb962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 2075255552}
@@ -905,7 +905,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 55212838}
@@ -4224,11 +4224,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 766864361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ff51f512863be458fdf967709fdb03, type: 3}
+  m_Script: {fileID: 11500000, guid: ce28188c922fafc45b6d49c98d03d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.89
+  parallaxEffect: 0
 --- !u!212 &766864364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5421,7 +5421,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008342705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52c30f5305bb624a9f13a7b50b78d19, type: 3}
+  m_Script: {fileID: 11500000, guid: c1798643839794341895e9981975ed37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCharacter: {fileID: 5368386750553452943, guid: f22a85581232dba4484e37c579a99639,
@@ -6219,7 +6219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00000071525574}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 305.41776, y: 94.602234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229005276
@@ -6231,7 +6231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1229005274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d29499fa60e774c8a6879f3219e0c3, type: 3}
+  m_Script: {fileID: 11500000, guid: f057f2a486fcb954db2ad86a0b8bb962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1380660644}
@@ -6263,7 +6263,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 0
+    m_Mode: 1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 1172611943}
@@ -8037,11 +8037,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612513501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ff51f512863be458fdf967709fdb03, type: 3}
+  m_Script: {fileID: 11500000, guid: ce28188c922fafc45b6d49c98d03d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.3
+  parallaxEffect: 0
 --- !u!212 &1612513504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8566,11 +8566,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1701997241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ff51f512863be458fdf967709fdb03, type: 3}
+  m_Script: {fileID: 11500000, guid: ce28188c922fafc45b6d49c98d03d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.99
+  parallaxEffect: 0
 --- !u!212 &1701997244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9885,11 +9885,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070168628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ff51f512863be458fdf967709fdb03, type: 3}
+  m_Script: {fileID: 11500000, guid: ce28188c922fafc45b6d49c98d03d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.75
+  parallaxEffect: 0
 --- !u!212 &2070168631
 SpriteRenderer:
   m_ObjectHideFlags: 0

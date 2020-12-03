@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace sands {
+    public class Quest : MonoBehaviour {
+        LootPicker lootpicker;
 
-public class Quest : MonoBehaviour
-{
-    LootPicker lootpicker;
 
-
+    }
 }
