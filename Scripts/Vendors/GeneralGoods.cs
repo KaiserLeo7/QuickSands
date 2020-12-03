@@ -6,10 +6,10 @@ namespace Sands
 
 {
 
-public class GeneralGoods : Vendor
-{
-    //need something to specify only certain types of items can be sold here
+    public class GeneralGoods : Vendor
+    {
+        //need something to specify only certain types of items can be sold here
 
-    public GeneralGoods(string name, string locationName, double lattitude, double longtitude) : base(name, locationName, lattitude, longtitude){}
-}
+        public GeneralGoods(string name, string locationName, double lattitude, double longtitude) : base(name, locationName, lattitude, longtitude) { }
+    }
 }

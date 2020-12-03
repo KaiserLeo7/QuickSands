@@ -6,29 +6,29 @@ namespace Sands
 
 {
 
-public class Vendor 
-{
-    private string name;
-    private Location location{get;}
-
-    public string Name
+    public class Vendor
     {
-        get 
+        private string name;
+        private Location location { get; }
+
+        public string Name
         {
-            return name;
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
         }
 
-        set
+        public Vendor(string name, string locationName, double latt, double longtitude)
         {
-            name = value;
+            this.name = name;
+            location = new Location(locationName, latt, longtitude);
         }
-    }
 
-    public Vendor(string name, string locationName, double latt, double longtitude)
-    {
-        this.name = name;
-        location = new Location(locationName, latt, longtitude);
     }
-
-}
 }

@@ -5,44 +5,44 @@ using UnityEngine;
 namespace sands
 
 {
-public class Enemy
-{
-private int enemyHealth;
-private int enemyDamage;
-
-
-public int EnemyHealth 
-{
-    get
+    public class Enemy
     {
-        return enemyHealth;
+        private int enemyHealth;
+        private int enemyDamage;
+
+
+        public int EnemyHealth
+        {
+            get
+            {
+                return enemyHealth;
+            }
+
+            set
+            {
+                enemyHealth = value;
+            }
+        }
+
+        public int EnemyDamage
+        {
+
+            get
+            {
+                return enemyDamage;
+            }
+
+            set
+            {
+                enemyDamage = value;
+            }
+        }
+
+        public Enemy(int enemyHealth, int enemyDamage)
+        {
+            this.enemyHealth = enemyHealth;
+            this.enemyDamage = enemyDamage;
+        }
+
     }
-
-    set
-    {
-        enemyHealth = value;
-    }
-}
-
-public int EnemyDamage
-{
-
-    get
-    {
-        return enemyDamage;
-    }
-
-    set
-    {
-        enemyDamage = value;
-    }
-}
-
-public Enemy(int enemyHealth, int enemyDamage)
-{
-    this.enemyHealth = enemyHealth;
-    this.enemyDamage = enemyDamage;
-} 
-
-}
 }
