@@ -10,6 +10,5 @@ public class Equipable : Item
     public Equipable(string itemName, double weight, double price, int hero) : base(itemName, weight, price)
     {
         heroClass = new HeroClass(hero);
-
     }
 }
