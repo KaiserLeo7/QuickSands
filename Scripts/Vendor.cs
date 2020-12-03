@@ -20,6 +20,6 @@ public class Vendor
         }
     }
 
-    
+    public Vendor(string name, )
 
 }

@@ -34,7 +34,7 @@ public double Width
     }
 }
 
-public Map (double height, double width, string name, double lattitude, double longtitude) : base(height, width)
+public Map (double height, double width, string name, double lattitude, double longtitude) 
 {
     location = new Location(name, lattitude, longtitude);
 }
