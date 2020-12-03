@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+namespace Sands
+{
+    public class Item : MonoBehaviour
 {
     private string itemName;
     private double weight;
@@ -50,4 +52,6 @@ public class Item : MonoBehaviour
         this.weight = weight;
         this.price = price;
     }
+}
+
 }

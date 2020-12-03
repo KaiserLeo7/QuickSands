@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Usable : Item
+namespace Sands
 {
-    private int effectAmount{get; set;}
-    public Usable(int effectAmount,string itemName, double weight, double price) : base(itemName, weight, price)
+    public class Usable : Item
     {
-        this.effectAmount = effectAmount;
+        private int effectAmount { get; set; }
+        public Usable(int effectAmount, string itemName, double weight, double price) : base(itemName, weight, price)
+        {
+            this.effectAmount = effectAmount;
+        }
     }
 }
