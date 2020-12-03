@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace sands {
+namespace Sands {
     public class QuestGiver {
         Quest quest;
 		

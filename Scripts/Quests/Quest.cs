@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace sands {
+namespace Sands {
     public class Quest : MonoBehaviour {
         LootPicker lootpicker;
 

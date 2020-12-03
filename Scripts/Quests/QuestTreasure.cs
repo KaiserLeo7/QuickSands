@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace sands {
+namespace Sands {
     public class QuestTreasure : Quest {
 
         Location location;
