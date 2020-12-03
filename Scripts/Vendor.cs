@@ -20,6 +20,9 @@ public class Vendor
         }
     }
 
-    public Vendor(string name, )
+    public Vendor(string name, string locationName, double latt, double long)
+    {
+        location = new Location(locationName, latt, long);
+    }
 
 }
