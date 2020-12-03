@@ -10,8 +10,7 @@ private double lattitude;
 private double longtitude;
 
 
-public string Name 
-{
+public string Name {
     get
     {
         return name;
