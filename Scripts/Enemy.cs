@@ -21,7 +21,7 @@ public int EnemyHealth
     }
 }
 
-public int enemyDamage
+public int EnemyDamage
 {
 
     get
