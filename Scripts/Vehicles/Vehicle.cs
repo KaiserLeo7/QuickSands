@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Sands {
+
 public class Vehicle
 {
     private string name;
@@ -113,4 +115,5 @@ public class Vehicle
         this.weight = weight;
     }
 
+}
 }

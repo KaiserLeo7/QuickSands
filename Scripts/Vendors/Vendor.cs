@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Sands
+
+{
+
 public class Vendor 
 {
     private string name;
@@ -26,4 +30,5 @@ public class Vendor
         location = new Location(locationName, latt, longtitude);
     }
 
+}
 }

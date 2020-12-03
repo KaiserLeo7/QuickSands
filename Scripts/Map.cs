@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Sands
+
+{
+
 public class Map 
 {
 private double height;
@@ -39,6 +43,8 @@ public Map (double height, double width, string name, double lattitude, double l
     this.height = height;
     this.width = width;
     location = new Location(name, lattitude, longtitude);
+}
+
 }
 
 }

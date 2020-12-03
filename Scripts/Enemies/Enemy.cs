@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace sands
+
+{
 public class Enemy
 {
 private int enemyHealth;
@@ -41,4 +44,5 @@ public Enemy(int enemyHealth, int enemyDamage)
     this.enemyDamage = enemyDamage;
 } 
 
+}
 }

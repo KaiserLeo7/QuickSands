@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Sands
+
+{
+
 public class Location {
 private string name;
 private double lattitude;
@@ -52,4 +56,5 @@ public double Longtitude
 
 
 
+}
 }

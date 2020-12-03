@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Sands
+{
 public class Nest : Location
 {
     private Enemy enemySet{get;}
@@ -16,5 +18,9 @@ public class Nest : Location
 
 
 }
+
+}
+
+
 
 
