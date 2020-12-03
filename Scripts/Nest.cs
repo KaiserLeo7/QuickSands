@@ -9,7 +9,7 @@ public class Nest : Location
 
     public Nest(string name, double lattitude, double longtitude, int enemyName, int damage) : base(name, lattitude, longtitude)
     {
-        enemySet = new Enemy(enemyName, enemySet);
+        enemySet = new Enemy(enemyName, damage);
 
     }
 
