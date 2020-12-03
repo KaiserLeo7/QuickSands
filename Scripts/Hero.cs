@@ -5,7 +5,7 @@ using UnityEngine;
 
 //Script sets the values of the unit and its animation
 
-public class Unit : MonoBehaviour
+public class Hero : MonoBehaviour
 {
     //unit values
     public string unitName;

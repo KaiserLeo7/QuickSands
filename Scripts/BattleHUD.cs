@@ -14,7 +14,7 @@ public class BattleHUD : MonoBehaviour {
     public Image fill;
    
 
-    public void SetHUD(Unit unit) {
+    public void SetHUD(Hero unit) {
 
         nameText.text = unit.unitName;
         levelText.text = "Lvl " + unit.unitLevel;

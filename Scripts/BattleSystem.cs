@@ -20,8 +20,8 @@ public class BattleSystem : MonoBehaviour {
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
 
-    Unit playerUnit;
-    Unit enemyUnit;
+    Hero playerUnit;
+    Hero enemyUnit;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
@@ -95,13 +95,13 @@ public class BattleSystem : MonoBehaviour {
             characterTransform = Instantiate(prefabCharacter, playerBattleStation.position, Quaternion.identity);
 
             //assign to unit health
-            playerUnit = characterTransform.GetComponent<Unit>();
+            playerUnit = characterTransform.GetComponent<Hero>();
 
         } else {
             characterTransform = Instantiate(prefabEnemyCharacter, enemyBattleStation.position, Quaternion.Euler(0, 180, 0));
 
             //assign to unit health
-            enemyUnit = characterTransform.GetComponent<Unit>();
+            enemyUnit = characterTransform.GetComponent<Hero>();
         }
 
         CharAction characterAction = characterTransform.GetComponent<CharAction>();
