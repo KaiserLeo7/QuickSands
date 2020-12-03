@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Armor : MonoBehaviour
+public class Armor : Equipable
 {
     private int health;
     private double defence;
