@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+namespace Sands
 {
-    private Item[] itemSet;
-
-    public Inventory(){}
-    
-    public Inventory(Item[] itemSet)
+    public class Inventory : MonoBehaviour
     {
-        this.itemSet = itemSet;
+        private Item[] itemSet;
+
+        public Inventory(){}
+        
+        public Inventory(Item[] itemSet)
+        {
+            this.itemSet = itemSet;
+        }
     }
 }
+

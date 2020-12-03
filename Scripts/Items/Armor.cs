@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Armor : Equipable
+namespace Sands
 {
-    private int health;
-    private double defence;
-
-    public Armor(int health, double defence, string itemName, double weight, double price, int hero) : base(itemName, weight, price, hero)
+    public class Armor : Equipable
     {
-        this.health = health;
-        this.defence = defence;
+        private int health;
+        private double defence;
+
+        public Armor(int health, double defence, string itemName, double weight, double price, int hero) : base(itemName, weight, price, hero)
+        {
+            this.health = health;
+            this.defence = defence;
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
