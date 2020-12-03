@@ -102,6 +102,6 @@ public class Vehicle
         }
     }
 
-    public Vehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight){};
+    public Vehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight){}
 
 }
