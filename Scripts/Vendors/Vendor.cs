@@ -20,9 +20,10 @@ public class Vendor
         }
     }
 
-    public Vendor(string name, string locationName, double latt, double long)
+    public Vendor(string name, string locationName, double latt, double longtitude)
     {
-        location = new Location(locationName, latt, long);
+        this.name = name;
+        location = new Location(locationName, latt, longtitude);
     }
 
 }
