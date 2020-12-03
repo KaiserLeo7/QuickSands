@@ -6,7 +6,7 @@ public class EnemyMook : Enemy
 
 
 {
-    public EnemyMook(int health, int damage) : base(int health, int damage){}
+    public EnemyMook(int health, int damage) : base(health, damage){}
 
     //What is special about mooks?
 }

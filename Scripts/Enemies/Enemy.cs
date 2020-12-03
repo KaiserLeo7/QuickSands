@@ -35,10 +35,10 @@ public int EnemyDamage
     }
 }
 
-public Enemy(int hp, int dam)
+public Enemy(int enemyHealth, int enemyDamage)
 {
-    this.enemyHealth = hp;
-    this.enemyDamage = dam;
+    this.enemyHealth = enemyHealth;
+    this.enemyDamage = enemyDamage;
 } 
 
 }

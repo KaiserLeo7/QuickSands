@@ -6,12 +6,12 @@ public class EnemyBoss : Enemy
 {
 
 
-public EnemyBoss(int health, int damage) : base(int health, int damage){}
+public EnemyBoss(int health, int damage) : base(health, damage){}
 
 //what distinguishes bosses? Maybe an ability?
-public ability()
+/*public ability()
 {
 
-}
+}*/
 
 }
