@@ -22,6 +22,7 @@ MonoBehaviour:
   textureSettingsReference: 
   atlasTxtImportWarning: 1
   textureImporterWarning: 1
+  componentMaterialWarning: 1
   autoReloadSceneSkeletons: 1
   handleScale: 1
   mecanimEventIncludeFolderName: 1
