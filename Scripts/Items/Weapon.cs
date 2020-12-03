@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Snads
+namespace Sands
 {
     public class Weapon : Equipable
     {
