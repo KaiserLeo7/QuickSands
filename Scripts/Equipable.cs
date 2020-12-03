@@ -5,10 +5,11 @@ using UnityEngine;
 public class Equipable : Item
 {
     private HeroClass heroClass{get;}
-    //recipe
+    private bool equipped{get; set;}
 
     public Equipable(string itemName, double weight, double price, int hero) : base(itemName, weight, price)
     {
         heroClass = new HeroClass(hero);
+
     }
 }
