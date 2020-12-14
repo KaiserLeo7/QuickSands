@@ -13,6 +13,8 @@ namespace Sands
         private int enemyDamage;
 
         public Enemy(string enemyName, string enemyType, int enemyHealth, int enemyDamage) {
+            this.enemyName = enemyName;
+            this.enemyType = enemyType;
             this.enemyHealth = enemyHealth;
             this.enemyDamage = enemyDamage;
         }
@@ -20,7 +22,7 @@ namespace Sands
        
         /////////// GETTERS AND SETTERS //////////
 
-        public int EnemyName {
+        public string EnemyName {
             get {
                 return enemyName;
             }
@@ -29,7 +31,7 @@ namespace Sands
             }
         }
 
-        public int EnemyType {
+        public string EnemyType {
             get {
                 return enemyType;
             }

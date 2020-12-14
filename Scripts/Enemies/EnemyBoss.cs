@@ -8,7 +8,7 @@ namespace Sands
     {
 
 
-        public EnemyBoss(int health, int damage) : base(health, damage) { }
+        public EnemyBoss(string enemyName, string enemyType, int health, int damage) : base(enemyName, enemyType, health, damage) { }
 
         //what distinguishes bosses? Maybe an ability?
         /*public ability()

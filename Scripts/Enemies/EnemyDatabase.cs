@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Sands {
@@ -20,7 +21,7 @@ namespace Sands {
 
         //insert
         public List<Enemy> insertEnemy(Enemy enemy) {
-            if (enemyName != null)
+            if (enemy.EnemyName != null)
                 enemies.Add(enemy);
 
             return enemies;
@@ -28,17 +29,12 @@ namespace Sands {
 
         //delete
         public List<Enemy> deleteEnemy(Enemy enemy) {
-            for (int i = 0; i < enemies.lenght; i++) {
-
-                if (enemies[i].enemyName == enemy.enemyName)
-                    enemies.RemoveAt(i);
-            }
-            return enemies;
+            return enemies = enemies.Except(enemies.Where(e => e.EnemyName == enemy.EnemyName)).ToList();
         }
 
         //clear
         public void clearEnemyList() {
-            enemies.RemoveAll();
+            enemies.Clear();
         }
 
     }
