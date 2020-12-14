@@ -24,7 +24,7 @@ namespace Sands {
         }
 
         //clear
-        public void clearEnemyList() {
+        public void clearArmorList() {
             armors.Clear();
         }
 
