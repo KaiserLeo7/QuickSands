@@ -18,15 +18,6 @@ namespace Sands {
             return enemies[position];
         }
 
-
-        //insert
-        public List<Enemy> insertEnemy(Enemy enemy) {
-            if (enemy.EnemyName != null)
-                enemies.Add(enemy);
-
-            return enemies;
-        }
-
         //delete
         public List<Enemy> deleteEnemy(Enemy enemy) {
             return enemies = enemies.Except(enemies.Where(e => e.EnemyName == enemy.EnemyName)).ToList();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class QuestDatabase : BattleQuestDB {
+    public class BattleQuestDB : QuestDatabase  {
 
         private static List<Quest> quests = new List<Quest>();
 
@@ -11,7 +11,7 @@ namespace Sands {
 
         //insert
         public List<Quest> insertQuest(Quest quest) {
-            if (questID != null)
+            if (quest.QuestID != null)
                 quests.Add(quest);
 
             return quests;

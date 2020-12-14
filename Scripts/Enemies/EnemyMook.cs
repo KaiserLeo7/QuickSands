@@ -9,7 +9,7 @@ namespace Sands
 
 
     {
-        public EnemyMook(int health, int damage) : base(health, damage) { }
+        public EnemyMook(string enemyName, string enemyType, int health, int damage) : base(enemyName, enemyType, health, damage) { }
 
         //What is special about mooks?
     }
