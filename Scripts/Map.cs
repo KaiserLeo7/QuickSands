@@ -18,7 +18,6 @@ public double Height
     {
         return height;
     }
-
     set
     {
         height = value;

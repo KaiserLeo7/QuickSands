@@ -3,58 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands
-
 {
 
-public class Location {
-private string name;
-private double lattitude;
-private double longtitude;
+    public class Location {
+    private string name;
+    private double latitude;
+    private double longitude;
 
-    public Location(string name, double lattitude, double longtitude) {
-        this.name = name;
-        this.lattitude = lattitude;
-        this.longtitude = longtitude;
+        public Location(string name, double latitude, double longitude) {
+            this.name = name;
+            this.latitude = latitude;
+            this.longitude = longitude;
+        }
+
+        public string Name {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
+        public double Latitude
+        {
+            get 
+            {
+                return latitude;
+            }
+            set
+            {
+                latitude = value;
+            }
+        }
+
+        public double Longitude {
+            get
+            {
+                return longitude;
+            }
+            set
+            {
+                longitude = value;
+            }
+        }
     }
-
-    public string Name {
-    get
-    {
-        return name;
-    }
-
-    set
-    {
-        name = value;
-    }
-}
-
-public double Lattitude
-{
-    get 
-    {
-        return lattitude;
-    }
-
-    set
-    {
-        lattitude = value;
-    }
-}
-
-public double Longtitude
-{
-    get
-    {
-        return longtitude;
-    }
-    set
-    {
-        longtitude = value;
-    }
-}
-
-
-
-}
 }

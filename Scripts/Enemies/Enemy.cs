@@ -7,9 +7,36 @@ namespace Sands
 {
     public class Enemy
     {
+        private string enemyName;
+        private string enemyType;
         private int enemyHealth;
         private int enemyDamage;
 
+        public Enemy(string enemyName, string enemyType, int enemyHealth, int enemyDamage) {
+            this.enemyHealth = enemyHealth;
+            this.enemyDamage = enemyDamage;
+        }
+
+       
+        /////////// GETTERS AND SETTERS //////////
+
+        public int EnemyName {
+            get {
+                return enemyName;
+            }
+            set {
+                enemyName = value;
+            }
+        }
+
+        public int EnemyType {
+            get {
+                return enemyType;
+            }
+            set {
+                enemyType = value;
+            }
+        }
 
         public int EnemyHealth
         {
@@ -17,7 +44,6 @@ namespace Sands
             {
                 return enemyHealth;
             }
-
             set
             {
                 enemyHealth = value;
@@ -26,23 +52,15 @@ namespace Sands
 
         public int EnemyDamage
         {
-
             get
             {
                 return enemyDamage;
             }
-
             set
             {
                 enemyDamage = value;
             }
         }
-
-        public Enemy(int enemyHealth, int enemyDamage)
-        {
-            this.enemyHealth = enemyHealth;
-            this.enemyDamage = enemyDamage;
-        }
-
+        
     }
 }
