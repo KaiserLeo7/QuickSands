@@ -20,12 +20,12 @@ namespace Sands {
 
         //delete
         public List<Armor> deleteArmor(Armor armor) {
-            return armors = armors.Except(armors.Where(a => a. == enemy.EnemyName)).ToList();
+            return armors = armors.Except(armors.Where(a => a.ItemName == armor.ItemName)).ToList();
         }
 
         //clear
         public void clearEnemyList() {
-            enemies.Clear();
+            armors.Clear();
         }
 
     }
