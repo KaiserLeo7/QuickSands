@@ -6,24 +6,24 @@ namespace Sands
 {
 
     public class Location {
-    private string name;
+    private string locationName;
     private double latitude;
     private double longitude;
 
-        public Location(string name, double latitude, double longitude) {
-            this.name = name;
+        public Location(string locationName, double latitude, double longitude) {
+            this.locationName = locationName;
             this.latitude = latitude;
             this.longitude = longitude;
         }
 
-        public string Name {
+        public string LocationName {
             get
             {
-                return name;
+                return locationName;
             }
             set
             {
-                name = value;
+                locationName = value;
             }
         }
 

@@ -13,7 +13,7 @@ namespace Sands {
             return armors;
         }
 
-        //get Hero at position
+        //get Armor at position
         public Armor getArmor(int position) {
             return armors[position];
         }

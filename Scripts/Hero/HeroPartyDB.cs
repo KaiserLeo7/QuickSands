@@ -1,44 +1,39 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class HeroDatabase {
+    public class HeroPartyDB {
 
-        private static List<Hero> heroes = new List<Hero>();
+        private List<Hero> heroParty = new List<Hero>();
 
         //get database
         public List<Hero> getHeroList() {
-            return heroes;
+            return heroParty;
         }
 
         //get Hero at position
         public Hero getHero(int position) {
-          return heroes[position];
+            return heroParty[position];
         }
-    
+
 
         //insert
         public List<Hero> insertHero(Hero hero) {
             if (unitName != null)
-            heroes.Add(hero);
+                heroParty.Add(hero);
 
-            return heroes;
+            return heroParty;
         }
 
         //delete
         public List<Hero> deleteHero(Hero hero) {
-            for (int i = 0; i < heroes.lenght; i++) {
-
-                if (heroes[i].unitName == hero.unitName)
-                    heroes.RemoveAt(i);
-            }
-            return heroes;
+            return heroParty = heroParty.Except(heroParty.Where(h => h.unitName == hero.unitName)).ToList();
         }
 
         //clear
         public void clearHeroList() {
-            heroes.RemoveAll();
+            heroParty.Clear();
         }
     }
 }

@@ -7,19 +7,23 @@ using UnityEngine;
 namespace Sands {
     public class Hero {
         //unit values
-        public string unitName;
-        public int unitLevel;
+        private int heroID;
+        private int heroLevel;
+        private string heroClass;
 
-        public int damage;
+        private int damage;
+        private double critDamage;
 
-        public int maxHP;
-        public int currentHP;
+        private int maxHP;
+        private int currentHP;
         
       
-        public Hero(string unitName, int unitLevel, int damage, int maxHP, int currentHP) {
-            this.unitName = unitName;
-            this.unitLevel = unitLevel;
+        public Hero(int heroID, string heroClass, int heroLevel, int damage, double critDamage, int maxHP, int currentHP) {
+            this.heroID = heroID;
+            this.heroLevel = heroLevel;
+            this.heroClass = heroClass;
             this.damage = damage;
+            this.critDamage = critDamage;
             this.maxHP = mapHP;
             this.currentHP = currentHP;
         }
@@ -45,21 +49,30 @@ namespace Sands {
         /////////// GETTERS AND SETTERS //////////
         
 
-        public string UnitName {
+        public string HeroID {
             get {
-                return unitName;
+                return heroID;
             }
             set {
-                unitName = value;
+                heroID = value;
             }
         }
 
-        public string UnitLevel {
+        public string HeroLevel {
             get {
-                return unitLevel;
+                return heroLevel;
             }
             set {
-                unitLevel = value;
+                heroLevel = value;
+            }
+        }
+
+        public string HeroClass {
+            get {
+                return heroClass;
+            }
+            set {
+                heroClass = value;
             }
         }
 
@@ -69,6 +82,15 @@ namespace Sands {
             }
             set {
                 damage = value;
+            }
+        }
+
+        public string CritDamage {
+            get {
+                return critDamage;
+            }
+            set {
+                critDamage = value;
             }
         }
 

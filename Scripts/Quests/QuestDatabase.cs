@@ -28,17 +28,13 @@ namespace Sands {
 
         //delete
         public List<Quest> deleteQuest(Quest quest) {
-            for (int i = 0; i < quests.lenght; i++) {
 
-                if (quests[i].questID == hero.questID)
-                    quests.RemoveAt(i);
-            }
-            return quests;
+            return quests = quests.Except(quests.Where(q => q.questID == quest.questID)).ToList();
         }
 
         //clear
         public void clearQuestList() {
-            quests.RemoveAll();
+            quests.Clear();
         }
     }
 }
