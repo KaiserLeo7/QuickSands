@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Sands
 {
@@ -10,8 +8,7 @@ namespace Sands
 
         public Equipable(string itemName, double weight, double price, int hero) : base(itemName, weight, price)
         {
-            
+
         }
     }
-
 }

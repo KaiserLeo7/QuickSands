@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands
@@ -7,7 +5,7 @@ namespace Sands
     public class Usable : Item
     {
         private int effectAmount { get; set; }
-        public Usable(int effectAmount, string itemName, double weight, double price) : base(itemName, weight, price)
+        public Usable(string itemName, double weight, double price, int effectAmount) : base(itemName, weight, price)
         {
             this.effectAmount = effectAmount;
         }
