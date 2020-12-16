@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ namespace Sands {
             this.heroClass = heroClass;
             this.damage = damage;
             this.critDamage = critDamage;
-            this.maxHP = mapHP;
+            this.maxHP = maxHP;
             this.currentHP = currentHP;
         }
 
