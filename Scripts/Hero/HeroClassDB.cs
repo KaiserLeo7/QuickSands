@@ -15,9 +15,9 @@ namespace Sands {
         {
             heroes = new List<Hero>() {
                 //int heroID, string heroClass, int heroLevel, int damage, double critDamage, int maxHP, int currentHP
-                   heroes.Add(new Hero(1, "Warrior", 1, 100, 10.0, 500, 500)),
-                   heroes.Add(new Hero(2, "Ranger",  1, 50, 33.0, 350, 350)),
-                   heroes.Add(new Hero(3, "Mage",    1, 250, 15.0, 200, 200))
+                   new Hero(1, "Warrior", 1, 100, 10.0, 500, 500),
+                   new Hero(2, "Ranger",  1, 50, 33.0, 350, 350),
+                   new Hero(3, "Mage",    1, 250, 15.0, 200, 200)
             };
         }
         
