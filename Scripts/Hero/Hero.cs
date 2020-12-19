@@ -5,7 +5,7 @@ using UnityEngine;
 
 //Script sets the values of the unit and its animation
 namespace Sands {
-    public class Hero {
+    public abstract class Hero {
         //unit values
         
         private int damage;
@@ -23,22 +23,9 @@ namespace Sands {
             this.currentHP = currentHP;
         }
 
-        public bool TakeDamage(int dmg) {
-            currentHP -= dmg;
+        public abstract bool TakeDamage(int dmg);
 
-            if (currentHP <= 0) {
-                currentHP = 0;
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        public void Heal(int healAmount) {
-            currentHP += healAmount;
-            if (currentHP > maxHP)
-                currentHP = maxHP;
-        }
+        public abstract void Heal(int healAmount);
 
        
         /////////// GETTERS AND SETTERS //////////

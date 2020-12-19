@@ -4,39 +4,47 @@ using UnityEngine;
 
 
 //Script sets the values of the unit and its animation
-
-public class Hero : Ranger
-	{
-    //unit values
-    public string unitName;
-    public int unitLevel;
-
-
-    public int damage;
-
-    public int maxHP;
-    public int currentHP;
+namespace Sands
+{
+    public class Ranger : Hero
+    {
+        //unit values
+        public string unitName;
+        public int unitLevel;
 
 
-    public bool TakeDamage(int dmg) {
-        currentHP -= dmg;
+        public int damage;
 
-        if (currentHP <= 0) {
-            currentHP = 0;
-            return true;
-        } else {
-            return false;
+        public int maxHP;
+        public int currentHP;
+
+
+        public bool TakeDamage(int dmg)
+        {
+            currentHP -= dmg;
+
+            if (currentHP <= 0)
+            {
+                currentHP = 0;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-    }
 
-    public void Heal(int healAmount) {
-        currentHP += healAmount;
-        if (currentHP > maxHP)
-            currentHP = maxHP;
-    }
+        public void Heal(int healAmount)
+        {
+            currentHP += healAmount;
+            if (currentHP > maxHP)
+                currentHP = maxHP;
+        }
 
-    public int GetHealth() {
-        return currentHP;
-    }
+        public int GetHealth()
+        {
+            return currentHP;
+        }
 
+    }
 }
