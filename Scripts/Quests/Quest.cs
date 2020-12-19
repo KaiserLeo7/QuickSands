@@ -31,16 +31,6 @@ namespace Sands {
             }
         }
 
-        public string QuestType {
-            get {
-                return questType;
-            }
-            set {
-                questType = value;
-            }
-        }
-        
-
         public string QuestLocation {
             get {
                 return questLocation;
@@ -50,7 +40,7 @@ namespace Sands {
             }
         }
 
-        public double QuestReward {
+        public int QuestReward {
             get {
                 return questReward;
             }

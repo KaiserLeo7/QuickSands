@@ -17,21 +17,6 @@ namespace Sands {
             return quests[position];
         }
 
-
-        //insert
-        public List<Quest> insertQuest(Quest quest) {
-            if (questID != null)
-                quests.Add(quest);
-
-            return quests;
-        }
-
-        //delete
-        public List<Quest> deleteQuest(Quest quest) {
-
-            return quests = quests.Except(quests.Where(q => q.questID == quest.questID)).ToList();
-        }
-
         //clear
         public void clearQuestList() {
             quests.Clear();
