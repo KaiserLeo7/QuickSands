@@ -6,38 +6,46 @@ namespace Sands
 {
     public class Enemy
     {
-        private string enemyName;
-        private string enemyType;
-        private int enemyHealth;
         private int enemyDamage;
+        private double enemyCritDamage;
 
-        public Enemy(string enemyName, string enemyType, int enemyHealth, int enemyDamage) {
-            this.enemyName = enemyName;
-            this.enemyType = enemyType;
-            this.enemyHealth = enemyHealth;
+        private int enemyMaxHealth;
+        private int enemyCurrentHealth;
+
+        public Enemy(int enemyDamage, double enemyCritDamage, int enemyMaxHealth, int enemyCurrentHealth) {
+           
             this.enemyDamage = enemyDamage;
+            this.enemyCritDamage = enemyCritDamage;
+            this.enemyMaxHealth = enemyMaxHealth;
+            this.enemyCurrentHealth = enemyCurrentHealth;
         }
 
-       
         /////////// GETTERS AND SETTERS //////////
 
-        public string EnemyName {
-            get {
-                return enemyName;
+        public int EnemyDamage
+        {
+            get
+            {
+                return enemyDamage;
             }
-            set {
-                enemyName = value;
+            set
+            {
+                enemyDamage = value;
             }
         }
 
-        public string EnemyType {
-            get {
-                return enemyType;
-            }
-            set {
-                enemyType = value;
-            }
+        public int EnemyDamage
+            {
+                get
+                {
+                    return enemyDamage;
+                }
+                set
+                {
+                    enemyDamage = value;
+                }
         }
+
 
         public int EnemyHealth
         {
