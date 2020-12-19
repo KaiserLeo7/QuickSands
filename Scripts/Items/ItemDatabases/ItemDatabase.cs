@@ -19,7 +19,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             items = new List<Item>() {
-                //(health, defense, itemName, weight, price, hero)
+                //int health, double defence, string itemName, double weight, double price, int hero
                 new Armor(10, 10, "Chainmail Vest", 15, 30.0, 0),
                 new Armor(20, 15, "Iron Gamberson", 20, 50.0, 0),
                 new Armor(30, 20, "Steel Gamberson", 25, 70.0, 0),
@@ -35,15 +35,8 @@ namespace Sands
                 new Armor(10, 1, "Cloth Robes", 1, 50.0, 2),
                 new Armor(15, 5, "Voluminous Robes", 5, 80.0, 2),
                 new Armor(20, 10, "Drapes of the Profligate Seer", 10, 500.0, 2),
-                new Tradeable("Metals", 4, 40.0),
-                new Tradeable("Silver", 5, 50.0),
-                new Tradeable("Gold", 6, 60.0),
-                new Tradeable("Diamonds", 7, 100.0),
-                new Tradeable("Leather", 1, 10.0),
-                new Tradeable("Rations", 2, 20.0),
-                new Tradeable("Spices", 3, 30.0),
-                new Usable("Health Potion", 2, 100.0, 100),
-                new Usable("Repair Kit", 2, 200.0, 500),
+
+                //int damage, double crit, string itemName, double weight, double price, int hero
                 new Weapon(10, 10, "Iron Sword", 10, 20.0, 0),
                 new Weapon(20, 10, "Steel Sword", 10, 40.0, 0),
                 new Weapon(30, 10, "Damascus Steel Sword", 10, 80.0, 0),
@@ -59,7 +52,23 @@ namespace Sands
                 new Weapon(20, 15, "Elm Staff", 5, 40.0, 2),
                 new Weapon(15, 5, "Oak Wand", 1, 80.0, 2),
                 new Weapon(25, 15, "Obsidian Staff", 5, 160.0, 2),
-                new Weapon(60, 25, "Magnum Opus", 10, 500.0, 2)
+                new Weapon(60, 25, "Magnum Opus", 10, 500.0, 2),
+
+                //string itemName, double weight, double price
+                new Tradeable("Cloth", 2, 30.0),
+                new Tradeable("Leather", 3, 35.0),
+                new Tradeable("Spices", 1, 25.0),
+                new Tradeable("Rations", 2, 20.0),
+                new Tradeable("Coal", 5, 40.0),
+                new Tradeable("Steel", 7, 55.0),
+                new Tradeable("Tools", 5, 45.0),
+                new Tradeable("Silver", 6, 65.0),
+                new Tradeable("Gold", 6, 70.0),
+                new Tradeable("Diamonds", 5, 100.0),
+
+                //string itemName, double weight, double price, int effectAmount
+                new Usable("Health Potion", 2, 100.0, 100),
+                new Usable("Repair Kit", 2, 200.0, 500)
             };
         }
         //get Armor at position

@@ -10,11 +10,11 @@ namespace Sands
     private double latitude;
     private double longitude;
 
-        public Location(string locationName, double latitude, double longitude) {
-            this.locationName = locationName;
-            this.latitude = latitude;
-            this.longitude = longitude;
-        }
+    public Location(string locationName, double latitude, double longitude) {
+        this.locationName = locationName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 
         public string LocationName {
             get
