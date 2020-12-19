@@ -17,7 +17,7 @@ namespace Sands {
                 //  int damage, double critDamage, int maxHP, int currentHP
                 //string name, int health, int armour, double speed, int buttspace, int damage, double weight) : base(name, health, armour, speed, buttspace, damage, weight
                    new Scout( ),
-                   new Trader(  ),
+                   new Trader( ),
                    new Nomad( ),
                    new Goliath( )
             };

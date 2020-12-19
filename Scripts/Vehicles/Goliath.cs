@@ -7,7 +7,7 @@ namespace Sands
 {
     public class Goliath : Vehicle    //5 seat vehicle
     {
-        public Goliath(int health, int currentHealth,  int speed, int buttspace, int weight, int price) : base(health, currentHealth, speed, buttspace, weight, price) { }
+        public Goliath(int maxHP, int currentHP, int speed, int buttspace, int capacity, int price) : base(maxHP, currentHP, speed, buttspace, capacity, price) { }
 
     }
 

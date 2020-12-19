@@ -10,9 +10,9 @@ namespace Sands {
         private int speed;
         private int partySize;
         private int capacity;
-        private int value;
+        private int price;
 
-        public Vehicle(int maxHP, int currentHP, int speed, int partySize, int capacity, int value)
+        public Vehicle(int maxHP, int currentHP, int speed, int partySize, int capacity, int price)
         {
             this.maxHP = maxHP;
             this.currentHP = currentHP;
@@ -83,16 +83,16 @@ namespace Sands {
             }
         }
 
-        public int Value
+        public int Price
         {
             get
             {
-                return value;
+                return price;
             }
 
             set
             {
-                value = value;
+                price = value;
             }
         }
     }

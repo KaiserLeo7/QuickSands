@@ -7,7 +7,7 @@ namespace Sands
 {
     public class Scout : Vehicle   //2 seater vehicle
     {
-        public Scout(int health, int currentHealth, int speed, int buttspace,  int weight, int price) : base(health, currentHealth, speed, buttspace,  weight, price) { }
+        public Scout(int maxHP, int currentHP, int speed, int buttspace, int capacity, int price) : base(maxHP, currentHP, speed, buttspace, capacity, price) { }
 
     }
 
