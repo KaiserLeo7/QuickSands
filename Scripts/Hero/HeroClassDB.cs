@@ -31,11 +31,6 @@ namespace Sands {
         public Hero getHero(int position) {
           return heroes[position];
         }
-    
-        //delete
-        public List<Hero> deleteHero(Hero hero) {
-            return heroes = heroes.Except(heroes.Where(h => h.unitName == hero.unitName)).ToList();
-        }
 
         //clear
         public void clearHeroList() {
