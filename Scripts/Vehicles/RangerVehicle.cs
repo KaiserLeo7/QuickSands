@@ -8,7 +8,7 @@ namespace Sands
 
     public class RangerVehicle : Vehicle
     {
-        public RangerVehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight) : base(name, health, armour, speed, buttspace, damage, weight) { }
+        public RangerVehicle(int health, int speed, int buttspace,  double weight) : base(health, speed, buttspace,  weight) { }
 
     }
 

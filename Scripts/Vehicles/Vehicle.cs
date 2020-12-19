@@ -6,7 +6,6 @@ public class Vehicle
 {
     private string name;
     private int health;
-    private int armour;
     private double speed;
     private int partySize;
     private int damage;
