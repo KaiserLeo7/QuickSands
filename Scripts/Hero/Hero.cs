@@ -8,8 +8,6 @@ namespace Sands {
     public class Hero {
         //unit values
         
-        private string heroClass;
-
         private int damage;
         private double critDamage;
 

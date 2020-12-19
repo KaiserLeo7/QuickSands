@@ -15,9 +15,9 @@ namespace Sands {
         {
             heroes = new List<Hero>() {
                 //  int damage, double critDamage, int maxHP, int currentHP
-                   new Hero( 100, 10.0, 500, 500),
-                   new Hero(  50, 33.0, 350, 350),
-                   new Hero( 250, 15.0, 200, 200)
+                   new Warrior( 100, 10.0, 500, 500),
+                   new Ranger(   50, 33.0, 350, 350),
+                   new Mage(    250, 15.0, 200, 200)
             };
         }
         
