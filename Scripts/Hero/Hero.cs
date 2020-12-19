@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Sands {
     public class Hero {
         //unit values
-        private int heroID;
+        
         private int heroLevel;
         private string heroClass;
 
@@ -18,8 +18,8 @@ namespace Sands {
         private int currentHP;
         
       
-        public Hero(int heroID, string heroClass, int heroLevel, int damage, double critDamage, int maxHP, int currentHP) {
-            this.heroID = heroID;
+        public Hero( string heroClass, int heroLevel, int damage, double critDamage, int maxHP, int currentHP) {
+    
             this.heroLevel = heroLevel;
             this.heroClass = heroClass;
             this.damage = damage;
@@ -49,15 +49,6 @@ namespace Sands {
         /////////// GETTERS AND SETTERS //////////
         
 
-        public string HeroID {
-            get {
-                return heroID;
-            }
-            set {
-                heroID = value;
-            }
-        }
-
         public string HeroLevel {
             get {
                 return heroLevel;
@@ -76,7 +67,7 @@ namespace Sands {
             }
         }
 
-        public string Damage {
+        public int Damage {
             get {
                 return damage;
             }
@@ -85,7 +76,7 @@ namespace Sands {
             }
         }
 
-        public string CritDamage {
+        public double CritDamage {
             get {
                 return critDamage;
             }
@@ -94,7 +85,7 @@ namespace Sands {
             }
         }
 
-        public string MapHP {
+        public int MapHP {
             get {
                 return mapHP;
             }
@@ -103,7 +94,7 @@ namespace Sands {
             }
         }
 
-        public string CurrentHP {
+        public int CurrentHP {
             get {
                 return currentHP;
             }
