@@ -9,15 +9,6 @@ namespace Sands {
 
 
 
-        //insert
-        public List<Quest> insertQuest(Quest quest) {
-            if (quest.QuestID != null)
-                quests.Add(quest);
-
-            return quests;
-        }
-
-
 
 
 
