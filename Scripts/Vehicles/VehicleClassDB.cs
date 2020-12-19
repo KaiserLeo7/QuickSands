@@ -16,9 +16,10 @@ namespace Sands {
             vehicles = new List<Vehicle>() {
                 //  int damage, double critDamage, int maxHP, int currentHP
                 //string name, int health, int armour, double speed, int buttspace, int damage, double weight) : base(name, health, armour, speed, buttspace, damage, weight
-                   new WarriorVehicle( ),
-                   new MageVehicle(  ),
-                   new RangerVehicle( )
+                   new Scout( ),
+                   new Trader(  ),
+                   new Nomad( ),
+                   new Goliath( )
             };
         }
         
