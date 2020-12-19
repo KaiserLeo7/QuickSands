@@ -8,7 +8,6 @@ namespace Sands {
     public class Hero {
         //unit values
         
-        private int heroLevel;
         private string heroClass;
 
         private int damage;
@@ -75,7 +74,7 @@ namespace Sands {
             }
         }
 
-        public int MapHP {
+        public int MaxHP {
             get {
                 return maxHP;
             }

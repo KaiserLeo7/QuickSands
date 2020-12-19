@@ -6,8 +6,6 @@ namespace Sands
 {
 
     public class EnemyMook : Enemy
-
-
     {
         public EnemyMook(string enemyName, string enemyType, int health, int damage) : base(enemyName, enemyType, health, damage) { }
 
