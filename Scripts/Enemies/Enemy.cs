@@ -6,68 +6,67 @@ namespace Sands
 {
     public class Enemy
     {
-        private int enemyDamage;
-        private double enemyCritDamage;
+        private int damage;
+        private double critDamage;
+        private int maxHealth;
+        private int currentHealth;
 
-        private int enemyMaxHealth;
-        private int enemyCurrentHealth;
-
-        public Enemy(int enemyDamage, double enemyCritDamage, int enemyMaxHealth, int enemyCurrentHealth) {
+        public Enemy(int damage, double critDamage, int maxHealth, int currentHealth) {
            
-            this.enemyDamage = enemyDamage;
-            this.enemyCritDamage = enemyCritDamage;
-            this.enemyMaxHealth = enemyMaxHealth;
-            this.enemyCurrentHealth = enemyCurrentHealth;
+            this.damage = damage;
+            this.critDamage = critDamage;
+            this.maxHealth = maxHealth;
+            this.currentHealth = currentHealth;
         }
 
         /////////// GETTERS AND SETTERS //////////
 
-        public int EnemyDamage
+        public int Damage
         {
             get
             {
-                return enemyDamage;
+                return damage;
             }
             set
             {
-                enemyDamage = value;
+                damage = value;
             }
         }
 
-        public int EnemyDamage
+        public double CritDamage
             {
                 get
                 {
-                    return enemyDamage;
+                    return critDamage;
                 }
                 set
                 {
-                    enemyDamage = value;
+                    critDamage = value;
                 }
         }
 
 
-        public int EnemyHealth
+        public int MaxHealth
         {
             get
             {
-                return enemyHealth;
+                return maxHealth;
             }
             set
             {
-                enemyHealth = value;
+                maxHealth = value;
             }
         }
 
-        public int EnemyDamage
+        public int CurrentHealth
         {
             get
             {
-                return enemyDamage;
+                return currentHealth;
             }
             set
             {
-                enemyDamage = value;
+                currentHealth = value;
             }
         }
         
