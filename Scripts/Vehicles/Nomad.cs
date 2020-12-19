@@ -7,7 +7,7 @@ namespace Sands
 {
     public class Nomad : Vehicle    //4 seat vehicle
     {
-        public Nomad(int health, int currentHealth,  int speed, int buttspace, int weight, int value) : base(health, currentHealth, speed, buttspace, weight, value) { }
+        public Nomad(int health, int currentHealth,  int speed, int buttspace, int weight, int price) : base(health, currentHealth, speed, buttspace, weight, price) { }
 
     }
 
