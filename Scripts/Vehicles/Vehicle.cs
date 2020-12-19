@@ -101,13 +101,13 @@ public class Vehicle
         }
     }
 
-    public Vehicle(string name, int health, int armour, double speed, int buttspace, int damage, double weight)
+    public Vehicle(string name, int health, int armour, double speed, int partySize, int damage, double weight)
     {
         this.name = name;
         this.health = health;
         this.armour = armour;
         this.speed = speed;
-        this.PartySize = PartySize;
+        this.partySize = partySize;
         this.damage = damage;
         this.weight = weight;
     }
