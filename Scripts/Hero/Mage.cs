@@ -5,7 +5,7 @@ using UnityEngine;
 
 //Script sets the values of the unit and its animation
 
-public class Hero : Mage {
+public class Mage : Hero {
     //unit values
     public string unitName;
     public int unitLevel;
