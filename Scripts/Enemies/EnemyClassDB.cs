@@ -17,7 +17,9 @@ namespace Sands {
     {
         enemies = new List<Enemy>() {
            
- new EnemyGrond
+        new EnemyGround(),
+        new EnemyFlying(),
+        new EnemyBoss();
         };
     }
     

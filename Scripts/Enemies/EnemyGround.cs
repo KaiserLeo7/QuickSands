@@ -6,7 +6,7 @@ namespace Sands
 {
     public class EnemyGround : Enemy
     {
-        public EnemyGround(int damage, double critDamage, int maxHealth, int currentHealth) : base(int damage, double critDamage, int maxHealth, int currentHealth) { }
+        public EnemyGround(int damage, double critDamage, int maxHealth, int currentHealth) : base(damage, critDamage, maxHealth, currentHealth) { }
 
     }
 }
