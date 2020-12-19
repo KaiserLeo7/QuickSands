@@ -17,9 +17,8 @@ namespace Sands {
         private int currentHP;
         
       
-        public Hero( string heroClass, int damage, double critDamage, int maxHP, int currentHP) {
+        public Hero( int damage, double critDamage, int maxHP, int currentHP) {
     
-            this.heroClass = heroClass;
             this.damage = damage;
             this.critDamage = critDamage;
             this.maxHP = maxHP;
@@ -46,15 +45,6 @@ namespace Sands {
        
         /////////// GETTERS AND SETTERS //////////
         
-
-        public string HeroClass {
-            get {
-                return heroClass;
-            }
-            set {
-                heroClass = value;
-            }
-        }
 
         public int Damage {
             get {

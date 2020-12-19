@@ -14,10 +14,10 @@ namespace Sands {
         void BuildClassDatabase() 
         {
             heroes = new List<Hero>() {
-                //int heroID, string heroClass, int heroLevel, int damage, double critDamage, int maxHP, int currentHP
-                   new Hero("Warrior", 1, 100, 10.0, 500, 500),
-                   new Hero("Ranger",  1, 50, 33.0, 350, 350),
-                   new Hero("Mage",    1, 250, 15.0, 200, 200)
+                //  int damage, double critDamage, int maxHP, int currentHP
+                   new Hero( 100, 10.0, 500, 500),
+                   new Hero(  50, 33.0, 350, 350),
+                   new Hero( 250, 15.0, 200, 200)
             };
         }
         
