@@ -4,65 +4,59 @@ using UnityEngine;
 
 public class Vehicle
 {
-    private string name;
-    private int health;
-    private double speed;
+    private int maxHP;
+    private int currentHP;
+    private int speed;
     private int partySize;
-    private int damage;
-    private double weight;
+    private int capacity;
 
-    public string Name
+    public Vehicle(int maxHP, int currentHP, int speed, int partySize, int capacity)
+    {
+        this.maxHP = maxHP;
+        this.currentHP = currentHP;
+        this.speed = speed;
+        this.speed = speed;
+        this.partySize = partySize;
+        this.capacity = capacity;
+    }
+
+    public int MaxHP
     {
         get
         {
-            return name;
+            return maxHP;
         }
-
         set
         {
-            name = value;
+            maxHP = value;
         }
     }
-    public int Health
+
+    public int CurrentHP
     {
         get
         {
-            return health;
+            return currentHP;
         }
-
         set
         {
-            health = value;
+            currentHP = value;
         }
     }
-
-    public int Armour
-    {
-        get
-        {
-            return armour;
-        }
-
-        set
-        {
-            armour = value;
-        }
-    }
-
-    public double Speed
+    public int Speed
     {
         get
         {
             return speed;
         }
-
         set
         {
             speed = value;
         }
     }
 
-    public int PartySize {
+    public int PartySize
+    {
         get
         {
             return partySize;
@@ -74,41 +68,18 @@ public class Vehicle
         }
     }
 
-    public int Damage
+    public int Capacity
     {
         get
         {
-            return damage;
+            return capacity;
         }
 
         set
         {
-            damage = value;
+            capacity = value;
         }
     }
 
-    public double Weight
-    {
-        get
-        {
-            return weight;
-        }
-
-        set
-        {
-            weight = value;
-        }
-    }
-
-    public Vehicle(string name, int health, int armour, double speed, int partySize, int damage, double weight)
-    {
-        this.name = name;
-        this.health = health;
-        this.armour = armour;
-        this.speed = speed;
-        this.partySize = partySize;
-        this.damage = damage;
-        this.weight = weight;
-    }
 
 }
