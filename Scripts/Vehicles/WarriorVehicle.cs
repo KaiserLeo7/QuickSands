@@ -8,7 +8,7 @@ namespace Sands
 
     public class WarriorVehicle : Vehicle
     {
-        public WarriorVehicle(int health, int speed, int buttspace, double weight) : base(health, speed, buttspace, weight) { }
+        public WarriorVehicle(int health, int currentHealth,  int speed, int buttspace, int weight) : base(health, currentHealth, speed, buttspace, weight) { }
 
     }
 

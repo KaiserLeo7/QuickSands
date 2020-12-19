@@ -8,7 +8,7 @@ namespace Sands
 
     public class MageVehicle : Vehicle
     {
-        public MageVehicle(int health,  int speed, int buttspace,  double weight) : base(health, speed, buttspace, weight) { }
+        public MageVehicle(int health, int currentHealth,  int speed, int buttspace,  int weight) : base(health, currentHealth, speed, buttspace, weight) { }
 
     }
 
