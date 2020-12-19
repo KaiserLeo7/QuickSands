@@ -4,10 +4,23 @@ using System.Linq;
 using UnityEngine;
 
 namespace Sands {
-    public class EnemyDatabase {
+    public class EnemyClassDB {
 
         private static List<Enemy> enemies = new List<Enemy>();
 
+
+    void Awake() {
+        BuildClassDatabase();
+    }
+
+    void BuildClassDatabase() 
+    {
+        enemies = new List<Enemy>() {
+           
+
+        };
+    }
+    
         //get database
         public List<Enemy> getEnemyList() {
             return enemies;

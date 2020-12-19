@@ -6,16 +6,7 @@ using UnityEngine;
 //Script sets the values of the unit and its animation
 
 public class Mage : Hero {
-    //unit values
-    public string unitName;
-    public int unitLevel;
-
-
-    public int damage;
-
-    public int maxHP;
-    public int currentHP;
-
+    
 
     public bool TakeDamage(int dmg) {
         currentHP -= dmg;

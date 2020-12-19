@@ -14,13 +14,13 @@ namespace Sands {
         void BuildClassDatabase() 
         {
             heroes = new List<Hero>() {
+                //adding all 3 types off heroes to sample class
                 //  int damage, double critDamage, int maxHP, int currentHP
                    new Warrior( 100, 10.0, 500, 500),
                    new Ranger(   50, 33.0, 350, 350),
                    new Mage(    250, 15.0, 200, 200)
             };
         }
-        
 
         //get database
         public List<Hero> getHeroList() {
