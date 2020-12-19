@@ -107,7 +107,7 @@ public class Vehicle
         this.health = health;
         this.armour = armour;
         this.speed = speed;
-        this.buttSpace = buttSpace;
+        this.PartySize = PartySize;
         this.damage = damage;
         this.weight = weight;
     }
