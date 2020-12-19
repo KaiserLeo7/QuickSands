@@ -77,10 +77,10 @@ namespace Sands {
 
         public int MapHP {
             get {
-                return mapHP;
+                return maxHP;
             }
             set {
-                mapHP = value;
+                maxHP = value;
             }
         }
 
