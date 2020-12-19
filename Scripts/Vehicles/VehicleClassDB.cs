@@ -14,8 +14,8 @@ namespace Sands {
         void BuildVehicleDatabase() 
         {
             vehicles = new List<Vehicle>() {
-                //  int damage, double critDamage, int maxHP, int currentHP
-                //string name, int health, int armour, double speed, int buttspace, int damage, double weight) : base(name, health, armour, speed, buttspace, damage, weight
+                //  int maxHP, int currentHP, int speed, int partySize, int capacity, int price
+                
                    new Scout( ),
                    new Trader( ),
                    new Nomad( ),
