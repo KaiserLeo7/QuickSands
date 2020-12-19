@@ -8,24 +8,15 @@ namespace Sands
 {
     public class Warrior : Hero
     {
-        //unit values
-        public string unitName;
-        public int unitLevel;
+        public Warrior(int damage, double critDamage, int maxHP, int currentHP) : base(damage, critDamage, maxHP, currentHP) { }
 
-
-        public int damage;
-
-        public int maxHP;
-        public int currentHP;
-
-
-        public bool TakeDamage(int dmg)
+        public override bool TakeDamage(int dmg)
         {
-            currentHP -= dmg;
+            CurrentHP -= dmg;
 
-            if (currentHP <= 0)
+            if (CurrentHP <= 0)
             {
-                currentHP = 0;
+                CurrentHP = 0;
                 return true;
             }
             else
@@ -34,16 +25,16 @@ namespace Sands
             }
         }
 
-        public void Heal(int healAmount)
+        public override void Heal(int healAmount)
         {
-            currentHP += healAmount;
-            if (currentHP > maxHP)
-                currentHP = maxHP;
+            CurrentHP += healAmount;
+            if (CurrentHP > MaxHP)
+                CurrentHP = MaxHP;
         }
 
         public int GetHealth()
         {
-            return currentHP;
+            return CurrentHP;
         }
 
     }

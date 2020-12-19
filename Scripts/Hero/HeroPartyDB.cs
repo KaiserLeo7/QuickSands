@@ -17,20 +17,6 @@ namespace Sands {
             return heroParty[position];
         }
 
-
-        //insert
-        public List<Hero> insertHero(Hero hero) {
-            if (unitName != null)
-                heroParty.Add(hero);
-
-            return heroParty;
-        }
-
-        //delete
-        public List<Hero> deleteHero(Hero hero) {
-            return heroParty = heroParty.Except(heroParty.Where(h => h.unitName == hero.unitName)).ToList();
-        }
-
         //clear
         public void clearHeroList() {
             heroParty.Clear();
