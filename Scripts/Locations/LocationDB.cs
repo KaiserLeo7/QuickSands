@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Sands {
@@ -16,11 +15,6 @@ namespace Sands {
         //get Armor at position
         public Location getLocation(int position) {
             return locations[position];
-        }
-
-        //delete
-        public List<Location> deleteLocation(Location location) {
-            return locations = locations.Except(locations.Where(l => l.locationName == location.locationName)).ToList();
         }
 
         //clear

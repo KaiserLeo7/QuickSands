@@ -6,20 +6,15 @@ namespace Sands {
     public class Quest : MonoBehaviour {
         LootPicker lootpicker;
 
-        int questID;
         string questName;
-        string questType;
         
         string questLocation;
 
         int questReward;
 
-        Quest(int questID, string questName, string questType,
-            string questLocation, int questReward) {
+        Quest(string questName, string questLocation, int questReward) {
 
-            this.questID = questID;
             this.questName = questName;
-            this.questType = questType;
             this.questLocation = questLocation;
             this.questReward = questReward;
 
@@ -27,17 +22,7 @@ namespace Sands {
 
         
         /////////// GETTERS AND SETTERS //////////
-
-        public double QuestID {
-            get {
-                return questID;
-            }
-            set {
-                questID = value;
-            }
-        }
-
-        public double QuestName {
+        public string QuestName {
             get {
                 return questName;
             }
@@ -46,7 +31,7 @@ namespace Sands {
             }
         }
 
-        public double QuestType {
+        public string QuestType {
             get {
                 return questType;
             }
@@ -56,7 +41,7 @@ namespace Sands {
         }
         
 
-        public double QuestLocation {
+        public string QuestLocation {
             get {
                 return questLocation;
             }
