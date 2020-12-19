@@ -4,38 +4,38 @@ using UnityEngine;
 
 
 //Script sets the values of the unit and its animation
+namespace Sands
+{
+    public class Warrior : Hero
+    {
+        public Warrior(int damage, double critDamage, int maxHP, int currentHP) : base(damage, critDamage, maxHP, currentHP) { }
 
-public class Hero : Warrior {
-    //unit values
-    public string unitName;
-    public int unitLevel;
+        public override bool TakeDamage(int dmg)
+        {
+            CurrentHP -= dmg;
 
-
-    public int damage;
-
-    public int maxHP;
-    public int currentHP;
-
-
-    public bool TakeDamage(int dmg) {
-        currentHP -= dmg;
-
-        if (currentHP <= 0) {
-            currentHP = 0;
-            return true;
-        } else {
-            return false;
+            if (CurrentHP <= 0)
+            {
+                CurrentHP = 0;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-    }
 
-    public void Heal(int healAmount) {
-        currentHP += healAmount;
-        if (currentHP > maxHP)
-            currentHP = maxHP;
-    }
+        public override void Heal(int healAmount)
+        {
+            CurrentHP += healAmount;
+            if (CurrentHP > MaxHP)
+                CurrentHP = MaxHP;
+        }
 
-    public int GetHealth() {
-        return currentHP;
-    }
+        public int GetHealth()
+        {
+            return CurrentHP;
+        }
 
+    }
 }
