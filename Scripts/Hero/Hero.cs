@@ -23,7 +23,6 @@ namespace Sands {
             this.maxHP = maxHP;
             this.currentHP = currentHP;
             this.capacity = capacity;
-
         }
 
         public abstract bool TakeDamage(int dmg);
