@@ -5,7 +5,16 @@ using UnityEngine;
 namespace Sands {
     public class LocationDB {
 
-        private List<Location> locations = new List<Location>();
+        private static List<Location> locations = new List<Location>();
+
+
+
+
+
+
+
+
+
 
         //get database
         public List<Location> getLocationList() {

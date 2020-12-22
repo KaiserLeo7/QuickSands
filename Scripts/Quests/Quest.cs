@@ -12,13 +12,7 @@ namespace Sands {
 
         private int questReward;
 
-        public Quest(string questDescription, string questLocation, int questReward) {
-
-            this.questDescription = questDescription;
-            this.questLocation = questLocation;
-            this.questReward = questReward;
-
-        }
+        public Quest() {}
 
         
         /////////// GETTERS AND SETTERS //////////
