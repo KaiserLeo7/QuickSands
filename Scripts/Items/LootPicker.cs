@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Sands {
 
     class LootPicker {
 
-         private Item[] itemSet;
+         private List<Item> itemSet;
 
   
     }
