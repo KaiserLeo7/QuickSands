@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Sands {
     public class Quest : MonoBehaviour {
-        LootPicker lootpicker;
+        private LootPicker lootpicker;
 
         private string questDescription;
         
@@ -12,7 +12,7 @@ namespace Sands {
 
         private int questReward;
 
-        Quest(string questDescription, string questLocation, int questReward) {
+        public Quest(string questDescription, string questLocation, int questReward) {
 
             this.questDescription = questDescription;
             this.questLocation = questLocation;
