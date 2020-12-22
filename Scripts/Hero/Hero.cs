@@ -13,14 +13,17 @@ namespace Sands {
 
         private int maxHP;
         private int currentHP;
+        private int capacity;
         
       
-        public Hero( int damage, double critDamage, int maxHP, int currentHP) {
+        public Hero( int damage, double critDamage, int maxHP, int currentHP, int capacity) {
     
             this.damage = damage;
             this.critDamage = critDamage;
             this.maxHP = maxHP;
             this.currentHP = currentHP;
+            this.capacity = capacity;
+
         }
 
         public abstract bool TakeDamage(int dmg);
@@ -64,6 +67,15 @@ namespace Sands {
             }
             set {
                 currentHP = value;
+            }
+        }
+
+        public int Capacity {
+            get {
+                return capacity;
+            }
+            set {
+                capacity = value;
             }
         }
         
