@@ -9,28 +9,21 @@ namespace Sands
 
         private LocationDB locationDB = new LocationDB();
 
+        private System.Random random = new System.Random();
 
         public DeliveryQuest(string questDescription, string questLocation, int questReward)
         {
+            this.questReward = random.Next();
+          //  this.questDescription = "Deliver " + random (random tear) item + "to "
+          // + random.locationlist - currentlocation;
 
-            List<Location> locationList = locationDB.getLocationList();
+          //run locat
+            this.questLocation;
+
+           
 
         }
 
-        void Awake()
-        {
-            BuildClassDatabase();
-        }
-
-        void BuildClassDatabase()
-        {
-            quests = new List<locationList>()
-            {
-                //int damage, double critDamage, int maxHealth, int currentHealth
-
-
-            };
-        }
 
 
 
