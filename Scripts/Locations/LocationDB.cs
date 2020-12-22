@@ -8,13 +8,26 @@ namespace Sands {
         private static List<Location> locations = new List<Location>();
 
 
+        void Awake() {
+            BuildClassDatabase();
+        }
 
+        void BuildClassDatabase() 
+        {
+            locations = new List<Location>() {
+                //string locationName, double latitude, double longitude
+            new Location("Norwich", 100,100),
+             new Location("Wearoy", 100,100),
+              new Location("Norwich", 100,100),
+               new Location("Norwich", 100,100),
+                new Location("Norwich", 100,100),
+                 new Location("Norwich", 100,100),
+                  new Location("Norwich", 100,100)
 
-
-
-
-
-
+            
+            };
+        }
+    
 
         //get database
         public List<Location> getLocationList() {
