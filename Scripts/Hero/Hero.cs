@@ -13,6 +13,7 @@ namespace Sands {
 
         private int maxHP;
         private int currentHP;
+        
         private int capacity;
         
       
