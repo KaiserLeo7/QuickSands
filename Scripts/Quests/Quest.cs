@@ -6,15 +6,15 @@ namespace Sands {
     public class Quest : MonoBehaviour {
         LootPicker lootpicker;
 
-        string questName;
+        private string questDescription;
         
-        string questLocation;
+        private string questLocation;
 
-        int questReward;
+        private int questReward;
 
-        Quest(string questName, string questLocation, int questReward) {
+        Quest(string questDescription, string questLocation, int questReward) {
 
-            this.questName = questName;
+            this.questDescription = questDescription;
             this.questLocation = questLocation;
             this.questReward = questReward;
 
@@ -24,10 +24,10 @@ namespace Sands {
         /////////// GETTERS AND SETTERS //////////
         public string QuestName {
             get {
-                return questName;
+                return questDescription;
             }
             set {
-                questName = value;
+                questDescription = value;
             }
         }
 
