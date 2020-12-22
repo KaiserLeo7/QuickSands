@@ -17,10 +17,10 @@ namespace Sands {
                 //  int maxHP, int currentHP, int speed, int partySize, int capacity, int price
                 
                 //NEXT TIME BALANCE THESE
-                   new Scout(1000, 1000, 100, 2, ),
-                   new Trader(3000, 3000, 60, 3, ),
-                   new Nomad(5000, 5000, 80, 4, ),
-                   new Goliath(8000, 8000, 70, 5, )
+                   new Scout(1000, 1000, 100, 2, 500, ),
+                   new Trader(3000, 3000, 60, 3, 2500, ),
+                   new Nomad(5000, 5000, 80, 4, 1000, ),
+                   new Goliath(8000, 8000, 70, 5, 1500, )
             };
         }
         
