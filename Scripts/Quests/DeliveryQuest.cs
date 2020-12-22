@@ -2,33 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sands {
-    public class DeliveryQuest : Quest {
+namespace Sands
+{
+    public class DeliveryQuest : Quest
+    {
 
-        private LocationDB locationDB;
-    
-        LocationDB locationList = locationDB.getLocationList();
+        private LocationDB locationDB = new LocationDB();
 
-        public DeliveryQuest(string questDescription, string questLocation, int questReward) {
+
+        public DeliveryQuest(string questDescription, string questLocation, int questReward)
+        {
+
+            List<Location> locationList = locationDB.getLocationList();
 
         }
 
-        void Awake() {
+        void Awake()
+        {
             BuildClassDatabase();
         }
 
-        void BuildClassDatabase() 
+        void BuildClassDatabase()
         {
-            quests = new List<locationList>() {
-            //int damage, double critDamage, int maxHealth, int currentHealth
-            
+            quests = new List<locationList>()
+            {
+                //int damage, double critDamage, int maxHealth, int currentHealth
+
 
             };
         }
 
-        
 
 
-        }
+
     }
 }
