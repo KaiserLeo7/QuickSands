@@ -18,7 +18,6 @@ namespace Sands
           // + random.locationlist - currentlocation;
 
           //run locat
-            this.questLocation;
 
            
 
