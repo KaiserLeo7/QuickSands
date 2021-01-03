@@ -4,11 +4,29 @@ namespace Sands
 {
     public class Item : MonoBehaviour
     {
-        private int ID;
+        int id;
         private string itemName;
-        private double weight;
+        private int weight;
         private double price;
 
+        public Item(int id, string itemName, int weight, double price)
+        {
+            this.id = id;
+            this.itemName = itemName;
+            this.weight = weight;
+            this.price = price;
+        }
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public string ItemName
         {
             get
@@ -21,7 +39,7 @@ namespace Sands
             }
         }
 
-        public double Weight
+        public int Weight
         {
             get
             {
@@ -45,12 +63,6 @@ namespace Sands
             }
         }
 
-        public Item(int ID, string itemName, double weight, double price)
-        {
-            this.ID = ID;
-            this.itemName = itemName;
-            this.weight = weight;
-            this.price = price;
-        }
+      
     }
 }
