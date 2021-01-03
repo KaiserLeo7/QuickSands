@@ -15,7 +15,7 @@ namespace Sands {
         {
             locations = new List<Location>() {
                 //string locationName, double latitude, double longitude
-                new Location(1, "Norwich", 100,100,1),
+                new Location(1, "Norwich", 100, 100, 1, int[] nearbyTowns{2}),
                 new Location(2, "Westray", 100,100,1),
                 new Location(3, "Gillamoor", 100,100,2),
                 new Location(4, "Tunstead", 100,100,2),

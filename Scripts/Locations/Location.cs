@@ -11,15 +11,16 @@ namespace Sands
     private string locationName;
     private double latitude;
     private double longitude;
-
+    private int[] nearbyTowns;
     private int territory;
 
-    public Location(int id, string locationName, double latitude, double longitude, int territory) {
+    public Location(int id, string locationName, double latitude, double longitude, int territory, int[] nearbyTowns) {
         this.id = id;
         this.locationName = locationName;
         this.latitude = latitude;
         this.longitude = longitude;
         this.territory = territory;
+        this.nearbyTowns = nearbyTowns;
     }
 
         public int Id {
@@ -76,6 +77,18 @@ namespace Sands
             set
             {
                 territory = value;
+            }
+        }
+
+        public int[] NearbyTowns
+        {
+            get 
+            {
+                return nearbyTowns;
+            }
+            set
+            {
+                nearbyTowns = value;
             }
         }
     }
