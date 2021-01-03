@@ -3,33 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Sands
+{
+    public class BattleHUD : MonoBehaviour
+    {
 
-public class BattleHUD : MonoBehaviour {
+        public Text nameText;
+        public Text levelText;
 
-    public Text nameText;
-    public Text levelText;
+        public Slider hpSlider;
+        public Gradient gradient;
+        public Image fill;
 
-    public Slider hpSlider;
-    public Gradient gradient;
-    public Image fill;
-   
 
-    public void SetHUD(Hero unit) {
+        public void SetHUD(Hero unit)
+        {
 
-        nameText.text = unit.unitName;
-        levelText.text = "Lvl " + unit.unitLevel;
 
-        hpSlider.maxValue = unit.maxHP;
-        hpSlider.value = unit.currentHP;
+            hpSlider.maxValue = unit.MaxHP;
+            hpSlider.value = unit.CurrentHP;
 
-        fill.color = gradient.Evaluate(1f);
-    }
+            fill.color = gradient.Evaluate(1f);
+        }
 
-    public void SetHP(int hp) {
+        public void SetHP(int hp)
+        {
 
-        hpSlider.value = hp;
+            hpSlider.value = hp;
 
-        fill.color = gradient.Evaluate(hpSlider.normalizedValue);
+            fill.color = gradient.Evaluate(hpSlider.normalizedValue);
+        }
+
     }
 
 }
