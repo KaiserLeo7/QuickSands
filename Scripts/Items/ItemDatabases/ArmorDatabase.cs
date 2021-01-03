@@ -19,7 +19,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             armors = new List<Armor>() {
-                //int health, double defence, string itemName, double weight, double price, int hero
+                //int id, int health, double defence, string itemName, double weight, double price, int hero
                 new Armor(1, 10, 10, "Chainmail Vest", 15, 30.0, 0),
                 new Armor(2, 20, 15, "Iron Gamberson", 20, 50.0, 0),
                 new Armor(3, 30, 20, "Steel Gamberson", 25, 70.0, 0),
