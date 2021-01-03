@@ -11,12 +11,13 @@ namespace Sands
 
         private System.Random random = new System.Random();
 
-        private ItemDatabase itemDatabase = new ItemDatabase();
-
+        private  itemDatabase = new ItemDatabase();
+        private Item chosenItem;
         public DeliveryQuest(string questDescription, string questLocation, int questReward)
         {
+            this.chosenItem = itemDatabase.getItem(random.Next(35, 46));
             this.questReward = random.Next();
-          this.questDescription = "Deliver " + random.Next(random tear) item + "to " + random.locationlist - currentlocation;
+          this.questDescription = "Deliver " +   item + "to " + random.locationlist - currentlocation;
 
           //run locat
 
