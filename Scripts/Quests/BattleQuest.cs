@@ -10,6 +10,6 @@ namespace Sands
         public BattleQuest(string questDescription, string questLocation, int questReward){
             
         }
-        string whatever = "kill " + Convert.ToInt32(price) + " enemies";
+        string whatever = "defeat enemies at location";
     }
 }
