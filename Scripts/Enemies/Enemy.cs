@@ -7,11 +7,11 @@ namespace Sands
     public class Enemy
     {
         private int damage;
-        private double critChance;
+        private int critChance;
         private int maxHealth;
         private int currentHealth;
 
-        public Enemy(int damage, double critChance, int maxHealth, int currentHealth) {
+        public Enemy(int damage, int critChance, int maxHealth, int currentHealth) {
            
             this.damage = damage;
             this.critChance = critChance;
@@ -33,7 +33,7 @@ namespace Sands
             }
         }
 
-        public double CritDamage
+        public int CritDamage
             {
                 get
                 {
