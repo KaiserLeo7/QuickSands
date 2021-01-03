@@ -8,7 +8,7 @@ namespace Sands {
 
         protected string questDescription;
         
-        protected string questLocation;
+        protected Location questLocation;
 
         protected int questReward;
 
@@ -25,7 +25,7 @@ namespace Sands {
             }
         }
 
-        public string QuestLocation {
+        public Location QuestLocation {
             get {
                 return questLocation;
             }
