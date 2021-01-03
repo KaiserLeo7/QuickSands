@@ -16,9 +16,9 @@ namespace Sands {
             heroes = new List<Hero>() {
                 //adding all 3 types off heroes to sample class
                 //  int damage, double critDamage, int maxHP, int currentHP, int capacity
-                   new Warrior( 100, 10.0, 500, 500, 100),
-                   new Ranger(   50, 33.0, 350, 350, 75),
-                   new Mage(    200, 15.0, 200, 200, 60)
+                   new Warrior(100, 10.0, 500, 500, 100),
+                   new Ranger( 100, 33.0, 350, 350, 75),
+                   new Mage(   200, 15.0, 200, 200, 60)
             };
         }
 

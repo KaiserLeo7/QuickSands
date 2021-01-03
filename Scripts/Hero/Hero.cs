@@ -9,7 +9,7 @@ namespace Sands {
         //unit values
         
         private int damage;
-        private double critDamage;
+        private double critChance;
 
         private int maxHP;
         private int currentHP;
@@ -17,10 +17,10 @@ namespace Sands {
         private int capacity;
         
       
-        public Hero( int damage, double critDamage, int maxHP, int currentHP, int capacity) {
+        public Hero( int damage, double critChance, int maxHP, int currentHP, int capacity) {
     
             this.damage = damage;
-            this.critDamage = critDamage;
+            this.critChance = critChance;
             this.maxHP = maxHP;
             this.currentHP = currentHP;
             this.capacity = capacity;
@@ -43,12 +43,12 @@ namespace Sands {
             }
         }
 
-        public double CritDamage {
+        public double CritChance {
             get {
-                return critDamage;
+                return critChance;
             }
             set {
-                critDamage = value;
+                critChance = value;
             }
         }
 
