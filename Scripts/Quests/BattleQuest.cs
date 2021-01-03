@@ -7,7 +7,7 @@ namespace Sands
 {
     public class BattleQuest : Quest
     {
-        BattleQuest(string questDescription, string questLocation, int questReward){
+        public BattleQuest(string questDescription, string questLocation, int questReward){
             
         }
         string whatever = "kill " + Convert.ToInt32(price) + " enemies";

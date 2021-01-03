@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Sands {
     public class Quest : MonoBehaviour {
-        private LootPicker lootpicker;
+        protected LootPicker lootpicker;
 
-        private string questDescription;
+        protected string questDescription;
         
-        private string questLocation;
+        protected string questLocation;
 
-        private int questReward;
+        protected int questReward;
 
         public Quest() {}
 

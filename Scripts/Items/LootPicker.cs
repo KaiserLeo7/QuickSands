@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Sands {
 
-    class LootPicker {
+    public class LootPicker {
 
          private List<Item> itemSet;
 
