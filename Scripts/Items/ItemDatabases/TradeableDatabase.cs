@@ -18,16 +18,16 @@ namespace Sands
         {
             tradeables = new List<Tradeable>() {
                 //string itemName, double weight, double price
-                new Tradeable("Cloth", 2, 30.0),
-                new Tradeable("Leather", 3, 35.0),
-                new Tradeable("Spices", 1, 25.0),
-                new Tradeable("Rations", 2, 20.0),
-                new Tradeable("Coal", 5, 40.0),
-                new Tradeable("Steel", 7, 55.0),
-                new Tradeable("Tools", 5, 45.0),
-                new Tradeable("Silver", 6, 65.0),
-                new Tradeable("Gold", 6, 70.0),
-                new Tradeable("Diamonds", 5, 100.0)
+                new Tradeable(1, "Cloth", 2, 30.0),
+                new Tradeable(2, "Leather", 3, 35.0),
+                new Tradeable(3, "Spices", 1, 25.0),
+                new Tradeable(4, "Rations", 2, 20.0),
+                new Tradeable(5, "Coal", 5, 40.0),
+                new Tradeable(6, "Steel", 7, 55.0),
+                new Tradeable(7, "Tools", 5, 45.0),
+                new Tradeable(8, "Silver", 6, 65.0),
+                new Tradeable(9, "Gold", 6, 70.0),
+                new Tradeable(10, "Diamonds", 5, 100.0)
             };
         }
 
