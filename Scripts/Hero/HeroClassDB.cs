@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Sands {
     public class HeroClassDB : MonoBehaviour {
 
-        public List<Hero> heroes = new List<Hero>();
+        public static List<Hero> heroes = new List<Hero>();
 
         void Awake() {
             BuildClassDatabase();

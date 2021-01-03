@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Sands {
     public class VehicleDB : MonoBehaviour {
 
-        public List<Vehicle> vehicles = new List<Vehicle>();
+        public static List<Vehicle> vehicles = new List<Vehicle>();
 
         void Awake() {
             BuildVehicleDatabase();

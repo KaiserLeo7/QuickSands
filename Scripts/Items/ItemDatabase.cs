@@ -8,7 +8,7 @@ namespace Sands
     public class ItemDatabase
     {
 
-        private List<Item> items = new List<Item>();
+        private static List<Item> items = new List<Item>();
 
         //get database
         public List<Item> getItemList()

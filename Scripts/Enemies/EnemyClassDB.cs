@@ -31,12 +31,7 @@ namespace Sands {
         //get Hero at position
         public Enemy getEnemy(int position) {
             return enemies[position];
-        }
-
-        //delete
-        public List<Enemy> deleteEnemy(Enemy enemy) {
-            return enemies = enemies.Except(enemies.Where(e => e.EnemyName == enemy.EnemyName)).ToList();
-        }
+        }        
 
         //clear
         public void clearEnemyList() {
