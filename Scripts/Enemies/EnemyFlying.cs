@@ -6,7 +6,7 @@ namespace Sands
 {
     public class EnemyFlying : Enemy
     {
-        public EnemyFlying(int damage, double critDamage, int maxHealth, int currentHealth) : base( damage, critDamage, maxHealth, currentHealth) { }
+        public EnemyFlying(int damage, double critChance, int maxHealth, int currentHealth) : base(damage, critChance, maxHealth, currentHealth) { }
 
         //What is special about mooks?
     }
