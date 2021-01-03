@@ -11,8 +11,6 @@ namespace Sands
 
         private System.Random random = new System.Random();
 
-        private ItemDatabase itemDatabase = new ItemDatabase();
-
         public DeliveryQuest(string questDescription, string questLocation, int questReward)
         {
             this.questReward = random.Next();

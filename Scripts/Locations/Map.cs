@@ -1,47 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
 
-namespace Sands
-{
+// namespace Sands
+// {
 
-    public class Map 
-    {
+//     public class Map 
+//     {
 
-    private double height;
-    private double width;
+//     private double height;
+//     private double width;
    
-    private Location location{get;}
+//     private Location location{get;}
 
-        public Map(double height, double width, string locationName, double latitude, double longitude) {
-            this.height = height;
-            this.width = width;
-            location = new Location(locationName, latitude, longitude);
-        }
+//         public Map(double height, double width, string locationName, double latitude, double longitude) {
+//             this.height = height;
+//             this.width = width;
+//             location = new Location(locationName, latitude, longitude, territory);
+//         }
 
-        public double Height 
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-            }
-        }
+//         public double Height 
+//         {
+//             get
+//             {
+//                 return height;
+//             }
+//             set
+//             {
+//                 height = value;
+//             }
+//         }
 
-        public double Width
-        {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                width = value;
-            }
-        }
-    }
+//         public double Width
+//         {
+//             get
+//             {
+//                 return width;
+//             }
+//             set
+//             {
+//                 width = value;
+//             }
+//         }
+//     }
 
-}
+// }
