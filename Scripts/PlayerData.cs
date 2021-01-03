@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Sands {
     public class PlayerData : MonoBehaviour {
 
-        private string currentLocation;
+        private static string currentLocation;
         public PlayerData() {}
 
        
