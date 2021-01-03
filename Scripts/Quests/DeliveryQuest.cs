@@ -8,36 +8,23 @@ namespace Sands
     {
 
         private LocationDB locationDB = new LocationDB();
-
         private System.Random random = new System.Random();
-
-<<<<<<< Updated upstream
-=======
         private TradeableDatabase tradeableDatabase = new TradeableDatabase();
         private Tradeable chosenTradeable;
         private Location chosenLocation;
-        int[] amount = new int[]{50, 45, 40, 35, 30, 25, 20, 15, 10, 5};
->>>>>>> Stashed changes
+        int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
         public DeliveryQuest(string questDescription, string questLocation, int questReward)
         {
-          chosenTradeable = tradeableDatabase.getTradeable(random.Next(1, 11));
-          
-          this.questReward = random.Next();
-          do
-          {
-            chosenLocation = locationDB.getLocation(random.Next(1, 11));
-          } while (chosenLocation != currentLocation);
-          this.questDescription = "Deliver " +  chosenTradeable.ItemName + "to " + chosenLocation.LocationName;
+            chosenTradeable = tradeableDatabase.getTradeable(random.Next(1, 11));
 
-          //run locat
+            do
+            {
+                chosenLocation = locationDB.getLocation(random.Next(1, 11));
+            } while (chosenLocation != currentLocation);
+            this.questDescription = "Deliver " + chosenTradeable.ItemName + "to " + chosenLocation.LocationName;
 
-           
-
+            
+            this.questReward = random.Next();
         }
-
-
-
-
-
     }
 }
