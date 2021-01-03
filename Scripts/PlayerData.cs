@@ -5,19 +5,18 @@ using UnityEngine;
 namespace Sands {
     public class PlayerData : MonoBehaviour {
 
-        private static string currentLocation;
+        private static Location currentLocation;
         public PlayerData() {}
 
        
-        /////////// GETTERS AND SETTERS //////////
-        // public string QuestName {
-        //     get {
-        //         return questDescription;
-        //     }
-        //     set {
-        //         questDescription = value;
-        //     }
-        // }
+        public Location CurrentLocation {
+            get {
+                return currentLocation;
+            }
+            set {
+                currentLocation = value;
+            }
+        }
 
     }
 }  
