@@ -17,14 +17,17 @@ namespace Sands
         void BuildClassDatabase()
         {
             tradeables = new List<Tradeable>() {
-                //(itemName, weight, price)
-                new Tradeable("Metals", 4, 40.0),
-                new Tradeable("Silver", 5, 50.0),
-                new Tradeable("Gold", 6, 60.0),
-                new Tradeable("Diamonds", 7, 100.0),
-                new Tradeable("Leather", 1, 10.0),
+                //string itemName, double weight, double price
+                new Tradeable("Cloth", 2, 30.0),
+                new Tradeable("Leather", 3, 35.0),
+                new Tradeable("Spices", 1, 25.0),
                 new Tradeable("Rations", 2, 20.0),
-                new Tradeable("Spices", 3, 30.0)
+                new Tradeable("Coal", 5, 40.0),
+                new Tradeable("Steel", 7, 55.0),
+                new Tradeable("Tools", 5, 45.0),
+                new Tradeable("Silver", 6, 65.0),
+                new Tradeable("Gold", 6, 70.0),
+                new Tradeable("Diamonds", 5, 100.0)
             };
         }
 

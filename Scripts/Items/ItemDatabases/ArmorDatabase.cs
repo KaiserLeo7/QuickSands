@@ -34,7 +34,7 @@ namespace Sands
                 new Armor(5, 1, "Hermit's Old Robes", 1, 20.0, 2),
                 new Armor(10, 1, "Cloth Robes", 1, 50.0, 2),
                 new Armor(15, 5, "Voluminous Robes", 5, 80.0, 2),
-                new Armor(20, 10, "Drapes of the Profligate Seer", 10, 500.0, 2)
+                new Armor(20, 10, "Drapes of the Profligate Seer", 10, 500.0, 2),
             };
         }
         //get Armor at position

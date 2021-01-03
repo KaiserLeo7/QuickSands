@@ -18,7 +18,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             weapons = new List<Weapon>() {
-                //(damage, crit, itemName, weight, price, hero)
+                //int damage, double crit, string itemName, double weight, double price, int hero
                 new Weapon(10, 10, "Iron Sword", 10, 20.0, 0),
                 new Weapon(20, 10, "Steel Sword", 10, 40.0, 0),
                 new Weapon(30, 10, "Damascus Steel Sword", 10, 80.0, 0),
@@ -48,12 +48,6 @@ namespace Sands
         public List<Weapon> deleteWeapon(Weapon weapon)
         {
             return weapons = weapons.Except(weapons.Where(a => a.ItemName == weapon.ItemName)).ToList();
-        }
-
-        //clear
-        public void clearWeaponList()
-        {
-            weapons.Clear();
-        }
+        }        
     }
 }
