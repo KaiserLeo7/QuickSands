@@ -11,13 +11,10 @@ namespace Sands
 
         private System.Random random = new System.Random();
 
-<<<<<<< Updated upstream
-=======
         private TradeableDatabase tradeableDatabase = new TradeableDatabase();
         private Tradeable chosenTradeable;
         private Location chosenLocation;
         int[] amount = new int[]{50, 45, 40, 35, 30, 25, 20, 15, 10, 5};
->>>>>>> Stashed changes
         public DeliveryQuest(string questDescription, string questLocation, int questReward)
         {
           chosenTradeable = tradeableDatabase.getTradeable(random.Next(1, 11));
