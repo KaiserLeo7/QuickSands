@@ -6,7 +6,7 @@ namespace Sands
     {
         private bool equipped { get; set; }
 
-        public Equipable(string itemName, double weight, double price, int hero) : base(itemName, weight, price)
+        public Equipable(int ID, string itemName, double weight, double price, int hero) : base(ID, itemName, weight, price)
         {
 
         }
