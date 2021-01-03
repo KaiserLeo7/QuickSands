@@ -7,8 +7,8 @@ namespace Sands
 {
     public class BattleQuest : Quest
     {
-        public BattleQuest(string questDescription, string questLocation, int questReward){
-             string questDescription = "defeat enemies at location";
+        public BattleQuest( string questLocation, int questReward, string questDescription = "defeat enemies at location"){
+            this.questDescription = questDescription;
         }
        
     }
