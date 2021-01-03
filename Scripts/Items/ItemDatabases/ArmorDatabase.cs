@@ -8,17 +8,17 @@ namespace Sands
     public class ArmorDatabase
     {
 
-        private static List<Armor> armors = new List<Armor>();
+        private static List<Item> items = new List<Item>();
 
         //get database
-        public List<Armor> getArmorList()
+        public List<Item> getItemList()
         {
-            return armors;
+            return items;
         }
 
         void BuildClassDatabase()
         {
-            armors = new List<Armor>() {
+            items = new List<Item>() {
                 //int health, double defence, string itemName, double weight, double price, int hero
                 new Armor(10, 10, "Chainmail Vest", 15, 30.0, 0),
                 new Armor(20, 15, "Iron Gamberson", 20, 50.0, 0),
@@ -38,20 +38,20 @@ namespace Sands
             };
         }
         //get Armor at position
-        public Armor getArmor(int position)
+        public Item getItem(int position)
         {
-            return armors[position];
+            return items[position];
         }
 
-        public Item getArmor(string itemName)
+        public Item getItem(string itemName)
         {
-            return armors.Single(i => i.ItemName == itemName);
+            return items.Single(i => i.ItemName == itemName);
         }
 
         //clear
-        public void clearArmorList()
+        public void clearItemList()
         {
-            armors.Clear();
+            items.Clear();
         }
     }
 }
