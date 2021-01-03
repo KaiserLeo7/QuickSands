@@ -9,7 +9,7 @@ namespace Sands
         private List<Enemy> enemySet{get;}
 
 
-        public Nest(string name, double lattitude, double longtitude, int territory) : base(name, lattitude, longtitude, territory)
+        public Nest(int id, string name, double lattitude, double longtitude, int territory) : base(id, name, lattitude, longtitude, territory)
         {
             enemySet = new List<Enemy>();
         }
