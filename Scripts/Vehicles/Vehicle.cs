@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Sands {
     public class Vehicle
     {
+        private int id;
         private int maxHP;
         private int currentHP;
         private int speed;
@@ -12,14 +13,27 @@ namespace Sands {
         private int capacity;
         private int price;
 
-        public Vehicle(int maxHP, int currentHP, int speed, int partySize, int capacity, int price)
+        public Vehicle(int id, int maxHP, int currentHP, int speed, int partySize, int capacity, int price)
         {
+            this.id = id;
             this.maxHP = maxHP;
             this.currentHP = currentHP;
             this.speed = speed;
             this.speed = speed;
             this.partySize = partySize;
             this.capacity = capacity;
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
         }
 
         public int MaxHP
