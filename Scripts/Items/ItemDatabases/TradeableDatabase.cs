@@ -17,7 +17,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             tradeables = new List<Tradeable>() {
-                //string itemName, double weight, double price
+                //string itemName, int weight, double price
                 new Tradeable(1, "Cloth", 2, 30.0),
                 new Tradeable(2, "Leather", 3, 35.0),
                 new Tradeable(3, "Spices", 1, 25.0),

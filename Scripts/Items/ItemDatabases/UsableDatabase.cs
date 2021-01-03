@@ -17,7 +17,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             usables = new List<Usable>() {
-                //int ID, string itemName, double weight, double price, int effectAmount
+                //int ID, string itemName, int weight, double price, int effectAmount
                 new Usable(1, "Health Potion", 2, 100.0, 100),
                 new Usable(2, "Repair Kit", 2, 200.0, 500)
                 
