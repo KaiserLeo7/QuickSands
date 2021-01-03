@@ -7,14 +7,14 @@ namespace Sands
     public class Enemy
     {
         private int damage;
-        private double critDamage;
+        private double critChance;
         private int maxHealth;
         private int currentHealth;
 
-        public Enemy(int damage, double critDamage, int maxHealth, int currentHealth) {
+        public Enemy(int damage, double critChance, int maxHealth, int currentHealth) {
            
             this.damage = damage;
-            this.critDamage = critDamage;
+            this.critChance = critChance;
             this.maxHealth = maxHealth;
             this.currentHealth = currentHealth;
         }
@@ -37,11 +37,11 @@ namespace Sands
             {
                 get
                 {
-                    return critDamage;
+                    return critChance;
                 }
                 set
                 {
-                    critDamage = value;
+                    critChance = value;
                 }
         }
 
