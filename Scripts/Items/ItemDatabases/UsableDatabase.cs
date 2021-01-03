@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Sands
@@ -29,13 +28,5 @@ namespace Sands
         {
             return usables[position];
         }
-
-        //delete
-        public List<Usable> deleteUsable(Usable usable)
-        {
-            return usables = usables.Except(usables.Where(u => u.ItemName == usable.ItemName)).ToList();
-        }
-
-        //clear
     }
 }

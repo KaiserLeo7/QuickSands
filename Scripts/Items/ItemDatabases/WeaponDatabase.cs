@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Sands
@@ -43,11 +42,6 @@ namespace Sands
         {
             return weapons[position];
         }
-
-        //delete
-        public List<Weapon> deleteWeapon(Weapon weapon)
-        {
-            return weapons = weapons.Except(weapons.Where(a => a.ItemName == weapon.ItemName)).ToList();
-        }        
+   
     }
 }
