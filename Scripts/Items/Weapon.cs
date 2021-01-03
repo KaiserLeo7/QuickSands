@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Sands
 {
@@ -7,7 +7,7 @@ namespace Sands
         private int damage { get; set; }
         private int crit { get; set; }
 
-        public Weapon(int ID, int damage, int crit, string itemName, double weight, double price, int hero) : base(ID, itemName, weight, price, hero)
+        public Weapon(int ID, int damage, int crit, string itemName, int weight, double price, int hero) : base(ID, itemName, weight, price, hero)
         {
             this.damage = damage;
             this.crit = crit;

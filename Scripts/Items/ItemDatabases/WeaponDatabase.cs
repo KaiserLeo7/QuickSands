@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands
@@ -17,7 +17,7 @@ namespace Sands
         void BuildClassDatabase()
         {
             weapons = new List<Weapon>() {
-                //int damage, double crit, string itemName, int weight, double price, int hero
+                //int ID, int damage, double crit, string itemName, double weight, double price, int hero
                 new Weapon(1, 10, 10, "Iron Sword", 10, 20.0, 0),
                 new Weapon(2, 20, 10, "Steel Sword", 10, 40.0, 0),
                 new Weapon(3, 30, 10, "Damascus Steel Sword", 10, 80.0, 0),

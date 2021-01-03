@@ -22,6 +22,7 @@ namespace Sands {
             this.speed = speed;
             this.partySize = partySize;
             this.capacity = capacity;
+            this.price = price;
         }
 
         public int Id

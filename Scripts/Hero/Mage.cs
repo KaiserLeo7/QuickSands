@@ -8,7 +8,7 @@ namespace Sands
 {
     public class Mage : Hero
     {
-        public Mage(int damage, double critDamage, int maxHP, int currentHP, int capacity) : base(damage, critDamage, maxHP, currentHP, capacity) { }
+        public Mage(int damage, int critChance, int maxHP, int currentHP, int capacity) : base(damage, critChance, maxHP, currentHP, capacity) { }
 
         public override bool TakeDamage(int dmg)
         {

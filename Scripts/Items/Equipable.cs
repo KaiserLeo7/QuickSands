@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Sands
 {
@@ -6,7 +6,7 @@ namespace Sands
     {
         private bool equipped { get; set; }
 
-        public Equipable(int ID, string itemName, double weight, double price, int hero) : base(ID, itemName, weight, price)
+        public Equipable(int ID, string itemName, int weight, double price, int hero) : base(ID, itemName, weight, price)
         {
 
         }
