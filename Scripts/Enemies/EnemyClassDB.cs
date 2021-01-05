@@ -16,10 +16,10 @@ namespace Sands {
     void BuildClassDatabase() 
     {
         enemies = new List<Enemy>() {
-           //int damage, int critChance, int maxHealth, int currentHealth
-        new EnemyGround(200, 10, 750, 750),
-        new EnemyFlying(300, 25, 400, 400),
-        new EnemyBoss(750, 20, 5000, 5000)
+           //int id, int damage, int critChance, int maxHealth, int currentHealth
+        new EnemyGround(1,200, 10, 750, 750),
+        new EnemyFlying(2,300, 25, 400, 400),
+        new EnemyBoss(3,750, 20, 5000, 5000)
         };
     }
     
