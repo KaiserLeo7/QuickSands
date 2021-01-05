@@ -17,15 +17,9 @@ namespace Sands {
     {
         enemies = new List<Enemy>() {
            //int damage, int critChance, int maxHealth, int currentHealth
-<<<<<<< Updated upstream
-        new EnemyGround(350, 20, 300, 300),
-        new EnemyFlying(400, 15, 100, 100),
-        new EnemyBoss(500, 35, 3000, 3000)
-=======
         new EnemyGround(200, 10, 750, 750),
         new EnemyFlying(300, 25, 400, 400),
         new EnemyBoss(750, 20, 5000, 5000)
->>>>>>> Stashed changes
         };
     }
     

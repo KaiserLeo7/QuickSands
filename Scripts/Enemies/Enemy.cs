@@ -6,13 +6,14 @@ namespace Sands
 {
     public class Enemy
     {
+        private int id;
         private int damage;
         private int critChance;
         private int maxHealth;
         private int currentHealth;
 
-        public Enemy(int damage, int critChance, int maxHealth, int currentHealth) {
-           
+        public Enemy(int id, int damage, int critChance, int maxHealth, int currentHealth) {
+            this.id = id;
             this.damage = damage;
             this.critChance = critChance;
             this.maxHealth = maxHealth;
