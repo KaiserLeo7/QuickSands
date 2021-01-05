@@ -17,9 +17,9 @@ namespace Sands {
     {
         enemies = new List<Enemy>() {
            //int damage, int critChance, int maxHealth, int currentHealth
-        new EnemyGround(200, 20, 30, 30),
-        new EnemyFlying(350, 15, 10, 10),
-        new EnemyBoss(500, 35, 500, 500)
+        new EnemyGround(350, 20, 300, 300),
+        new EnemyFlying(400, 15, 100, 100),
+        new EnemyBoss(500, 35, 3000, 3000)
         };
     }
     
