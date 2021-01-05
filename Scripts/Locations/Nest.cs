@@ -15,17 +15,7 @@ namespace Sands
 
         public Nest(int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, int multiplier) : base(id, name, lattitude, longtitude, territory, nearbyTowns)
         {
-            enemies = new List<Enemy>(){
-                enemyClassDB.getEnemy(0),
-                enemyClassDB.getEnemy(0),
-                enemyClassDB.getEnemy(1),
-                enemyClassDB.getEnemy(0),
-                enemyClassDB.getEnemy(0),
-                enemyClassDB.getEnemy(0),
-                enemyClassDB.getEnemy(1),
-                enemyClassDB.getEnemy(1),
-                enemyClassDB.getEnemy(2)
-            };
+            enemies = enemyClassDB.getEnemyList();
             
             foreach (Enemy enemy in enemies)
             {
@@ -36,18 +26,18 @@ namespace Sands
 
             wave1 = new List<Enemy>(){
                 enemies[0],
-                enemies[1],
-                enemies[2]
+                enemies[0],
+                enemies[1]
             };
             wave2 = new List<Enemy>(){
-                enemies[3],
-                enemies[4],
-                enemies[5],
-                enemies[6],
-                enemies[7]
+                enemies[0],
+                enemies[0],
+                enemies[0],
+                enemies[1],
+                enemies[1]
             };
              wave3 = new List<Enemy>(){
-                enemies[8]
+                enemies[2]
             };
         }
     }
