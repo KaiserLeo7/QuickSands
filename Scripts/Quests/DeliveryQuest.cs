@@ -13,7 +13,7 @@ namespace Sands
         private Tradeable chosenTradeable;
         //parallel array of item delivery amounts based on tradeable id
         int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
-
+        private string distanceNote;
 
         public DeliveryQuest()
         {
@@ -45,17 +45,25 @@ namespace Sands
             //sets the price for a CONNECTED destination location 
             if (connected)
             {
-                    this.questReward = random.Next(200, 301);
+                this.questReward = random.Next(200, 301);
+                this.distanceNote = "Next to you";
             }
             //sets the price for a NOT CONNECTED destination location 
             else
             {
                 //if they're NOT in the same territory
                 if (playerData.CurrentLocation.Territory != questLocation.Territory)
+                {
                     this.questReward = random.Next(400, 501);
+                    this.distanceNote = "Far away";
+                }
+
                 //if they ARE in the same territory
                 else
+                {
                     this.questReward = random.Next(300, 401);
+                    this.distanceNote = "Nearby";
+                }
             }
         }
     }
