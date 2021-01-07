@@ -12,13 +12,13 @@ namespace Sands
         private PlayerData playerData = new PlayerData();
         public BattleQuest()
         {
-            this.QuestLocation = (Nest)nestDB.getNest(random.Next(0, 3));
-
+            this.questLocation = nestDB.getNest(random.Next(0, 3));
+            Nest nest = (Nest)this.questLocation;
             this.questDescription = "Defeat the " + questLocation.LocationName + " Nest";
 
             if (playerData.CurrentLocation.Territory != questLocation.Territory)
                 {
-                    this.questReward = random.Next(400*(Nest)(this.QuestLocation). , 501);
+                    this.questReward = random.Next(400*nest.Multiplier, 501);
                     this.distanceNote = "Far away";
                 }
                 else

@@ -14,6 +14,7 @@ namespace Sands
     private int[] nearbyTowns;
     private int territory;
 
+    public Location(){}
     public Location(int id, string locationName, double latitude, double longitude, int territory, int[] nearbyTowns) {
         this.id = id;
         this.locationName = locationName;
