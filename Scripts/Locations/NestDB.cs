@@ -16,9 +16,9 @@ namespace Sands {
             //int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, multiplier
             nests = new List<Nest>() {
                
-                new Nest(1, "Black Rock", 100, 100, 1, new int[]{2}, 1),
-                new Nest(2, "Infested Ruins", 100,100, 2, new int[]{4}, 2),               
-                new Nest(3, "Swarming Mines", 100,100, 3, new int[]{7}, 3)
+                new Nest(1, "Black Rock", 100, 100, 1, new int[]{2}, 1, false),
+                new Nest(2, "Infested Ruins", 100,100, 2, new int[]{4}, 2, false),               
+                new Nest(3, "Swarming Mines", 100,100, 3, new int[]{7}, 3, false)
                 
             };
         }
