@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Sands {
     public class QuestDatabase {
 
-        private static List<Quest> quests = new List<Quest>();
+        private List<Quest> quests = new List<Quest>();
 
         //calls the battle quest and delivery quests up to 5 times
         //the quests are genrated each time the player enters a town and are not regenerated before reaching a new town

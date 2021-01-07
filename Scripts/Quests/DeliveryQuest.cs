@@ -13,7 +13,6 @@ namespace Sands
         private Tradeable chosenTradeable;
         //parallel array of item delivery amounts based on tradeable id
         int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
-        private string distanceNote;
 
         public DeliveryQuest()
         {

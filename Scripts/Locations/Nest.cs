@@ -11,7 +11,7 @@ namespace Sands
         private List<Enemy> wave1;
         private List<Enemy> wave2;
         private List<Enemy> wave3;
-        private int multiplier;
+        protected int multiplier;
 
         public Nest(int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, int multiplier) : base(id, name, lattitude, longtitude, territory, nearbyTowns)
         {
@@ -39,6 +39,12 @@ namespace Sands
              wave3 = new List<Enemy>(){
                 enemies[2]
             };
+        }
+
+        public int Multiplier
+        {
+            get{ return multiplier; }
+            set{ multiplier = value; }
         }
     }
 }
