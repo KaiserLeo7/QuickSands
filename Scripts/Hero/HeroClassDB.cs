@@ -7,7 +7,7 @@ namespace Sands {
 
         public static List<Hero> heroes = new List<Hero>();
 
-        void Awake() {
+        void Start() {
             BuildClassDatabase();
         }
 

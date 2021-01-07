@@ -7,7 +7,7 @@ namespace Sands {
 
         public static List<Vehicle> vehicles = new List<Vehicle>();
 
-        void Awake() {
+        void Start() {
             BuildVehicleDatabase();
         }
 
