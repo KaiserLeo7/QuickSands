@@ -6,73 +6,44 @@ namespace Sands
 {
     public class QuestBoard
     {
-
         private PlayerData playerData = new PlayerData();
         private List<Quest> quests = new List<Quest>();
         private System.Random random = new System.Random();
-
+        private BattleQuest battleQuest;
         private NestDB nestDB = new NestDB();
        
         public void populateQuestList()
         {
+            //generate 4 delivery quests
             for (int i = 0; i < 4; i++)
                 quests.Add(new DeliveryQuest());
 
+            //create a new list
+            List<Nest> falseNestList = new List<Nest>();
 
-        List<Nest> trueNestList = new List<Nest>();
-
-
+            //get the list of nests
             foreach (Nest nest in nestDB.getNestList())
             {
-                
-
-                //need to check if all nests are active
-                //if all nest are active then generate 5th delivery instead of battle
-                //is any nests are not active generate a battle quest
-                //also check the nests that are not active and only
-                // allow for the generation of only those nests as battlequests
-                
-                //if nest in nestDB is active if not its false and add to new list
-                if (nest.ActiveStatus)
-                {
-                    trueNestList.Add(nest);
-                }
-
-                
+                //check if any nests are false
+                if (!nest.ActiveStatus)
+                //if false add to new list
+                    falseNestList.Add(nest);
             }
 
-            if(trueNestList.Count != 3) {
-                BattleQuest battleQuest;
-                bool again = false;
-                do{
-                    again = false;
-                    battleQuest = new BattleQuest();
-                    //only generate a battleQuest with available NestDB locations
-                  
-                    foreach (Quest quest in playerData.AcceptedQuests)
-                    {
-                        if (quest.QuestLocation.LocationName == battleQuest.QuestLocation.LocationName)
-                        {
-                            again = true;
-                        }
-                    }
+            //so long as theres at least 1 false acviteStatus nest
+            if(falseNestList.Count > 0) {
 
-                    foreach (Nest nest in trueNestList)
-                    {
-                        if (nest.LocationName == battleQuest.QuestLocation.LocationName)
-                        {
-                            again = true;
-                        }
-                    }
-                   
-                } while (again);
+                //generate a quest only from the available locations
+                battleQuest = new BattleQuest(falseNestList[random.Next(0,falseNestList.Count)]);
+                //add new battleQuest
                 quests.Add(battleQuest);
             }
             else{
+                //otherwise nests all are active
+                //no battlequests available
+                //generate 5th delivery quest
                 quests.Add(new DeliveryQuest());
             }
         }     
     }
 }
-
-
