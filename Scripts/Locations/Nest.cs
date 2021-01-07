@@ -15,9 +15,8 @@ namespace Sands
         private bool activeStatus;
         public Nest(){}
         
-        public Nest(int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, int multiplier) : base(id, name, lattitude, longtitude, territory, nearbyTowns)
+        public Nest(int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, int multiplier, bool activeStatus) : base(id, name, lattitude, longtitude, territory, nearbyTowns)
         {   
-            this.activeStatus = false;
             enemies = enemyClassDB.getEnemyList();
             
             foreach (Enemy enemy in enemies)
@@ -45,6 +44,12 @@ namespace Sands
         }
 
         public int Multiplier
+        {
+            get{ return multiplier; }
+            set{ multiplier = value; }
+        }
+
+        public bool Multiplier
         {
             get{ return multiplier; }
             set{ multiplier = value; }

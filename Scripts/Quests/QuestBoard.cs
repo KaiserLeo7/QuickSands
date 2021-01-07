@@ -21,9 +21,12 @@ namespace Sands {
 
             //     foreach 
             // } while (playerData.AcceptedQuests.Contains(quest));
-            if (true)
+            foreach (Nest nest in nestDB.getNestList())
             {
-                
+                if (nest.ac)
+                {
+                    
+                }
             }
                 quests.Add(quest);
             }
