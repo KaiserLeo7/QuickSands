@@ -18,6 +18,7 @@ namespace Sands
 
             if (playerData.CurrentLocation.Territory != questLocation.Territory)
                 {
+                    /////////IF DOESN'T WORK REMOVE MULTIPLIER IT'S ABOUT DOWNCASTING A PARENT TO A CHILD LOCATION TO NEST
                     this.questReward = random.Next(400*nest.Multiplier, 501);
                     this.distanceNote = "Far away";
                 }
