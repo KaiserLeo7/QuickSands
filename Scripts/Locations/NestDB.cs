@@ -13,7 +13,7 @@ namespace Sands {
 
         void BuildClassDatabase() 
         {
-            //int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns
+            //int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns, multiplier
             nests = new List<Nest>() {
                
                 new Nest(1, "Black Rock", 100, 100, 1, new int[]{2}, 1),
