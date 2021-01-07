@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class QuestGiver {
+    public class QuestBoard {
 
         private PlayerData playerData = new PlayerData();
         private List<Quest> quests = new List<Quest>();
