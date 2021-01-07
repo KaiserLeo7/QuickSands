@@ -7,12 +7,9 @@ namespace Sands {
 
         private static Location currentLocation;
 
-<<<<<<< Updated upstream
-=======
 //private static (add a way to save quests and nest status)
-        private QuestDatabase database;
+        private QuestBoard questBoard;
 
->>>>>>> Stashed changes
         private static List<Quest> acceptedQuests = new List<Quest>();
         public PlayerData() {}
 
