@@ -49,10 +49,10 @@ namespace Sands
             set{ multiplier = value; }
         }
 
-        public bool Multiplier
+        public bool ActiveStatus
         {
-            get{ return multiplier; }
-            set{ multiplier = value; }
+            get{ return activeStatus; }
+            set{ activeStatus = value; }
         }
     }
 }

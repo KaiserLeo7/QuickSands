@@ -7,9 +7,6 @@ namespace Sands {
 
         private static Location currentLocation;
 
-//private static (add a way to save quests and nest status)
-        private QuestBoard questBoard;
-
         private static List<Quest> acceptedQuests = new List<Quest>();
         public PlayerData() {}
 
