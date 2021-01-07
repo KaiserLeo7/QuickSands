@@ -24,7 +24,7 @@ namespace Sands
                 }
                 else
                 {
-                    this.questReward = random.Next(300, 401);
+                    this.questReward = random.Next(300*nest.Multiplier, 401);
                     this.distanceNote = "Nearby";
                 }
         }
