@@ -6,8 +6,11 @@ namespace Sands {
     public class PlayerData : MonoBehaviour {
 
         private static Location currentLocation;
-
+        private NestDB nestDB = new NestDB();
         private static List<Quest> acceptedQuests = new List<Quest>();
+
+        //ADD A PART THAT CHECKS IF IT'S THE FIRST TIME THE GAME IS STARTING
+        private bool[] nestsStatus = new bool[3];
         public PlayerData() {}
 
        
