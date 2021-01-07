@@ -12,7 +12,7 @@ namespace Sands
         private PlayerData playerData = new PlayerData();
         private Tradeable chosenTradeable;
         //parallel array of item delivery amounts based on tradeable id
-        int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
+        private int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
 
         public DeliveryQuest()
         {
