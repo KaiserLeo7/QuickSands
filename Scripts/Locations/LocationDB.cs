@@ -7,7 +7,7 @@ namespace Sands {
 
         private static List<Location> locations = new List<Location>();
 
-        void Awake() {
+        void Start() {
             BuildClassDatabase();
         }
 
