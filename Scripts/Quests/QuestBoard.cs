@@ -44,9 +44,9 @@ namespace Sands
             if(falseNestList.Count > 0) {
                 do{
 
-                   int nestNumber =  random.Next(0, falseNestList.Count)
+                 int nestNumber = random.Next(0, falseNestList.Count);
                   //only generate a battleQuest with available NestDB locations
-                  falseNestList[];
+                  falseNestList[0];
                   
                   BattleQuest battleQuest = new BattleQuest();
 
