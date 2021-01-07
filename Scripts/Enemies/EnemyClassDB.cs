@@ -9,7 +9,7 @@ namespace Sands {
         private static List<Enemy> enemies = new List<Enemy>();
 
 
-    void Awake() {
+    void Start() {
         BuildClassDatabase();
     }
 
