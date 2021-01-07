@@ -19,7 +19,7 @@ namespace Sands
                 quests.Add(new DeliveryQuest());
 
 
-        List<Nest> falseNestList = new List<Nest>();
+        List<Nest> trueNestList = new List<Nest>();
 
 
             foreach (Nest nest in nestDB.getNestList())
@@ -33,34 +33,45 @@ namespace Sands
                 // allow for the generation of only those nests as battlequests
                 
                 //if nest in nestDB is active if not its false and add to new list
-                if (!nest.ActiveStatus)
+                if (nest.ActiveStatus)
                 {
-                    falseNestList.Add(nest);
+                    trueNestList.Add(nest);
                 }
 
                 
             }
 
-            if(falseNestList.Count > 0) {
+            if(trueNestList.Count > 0) {
+                BattleQuest battleQuest = new BattleQuest();
+                bool again = false;
                 do{
 
-                 int nestNumber = random.Next(0, falseNestList.Count);
                   //only generate a battleQuest with available NestDB locations
-                  falseNestList[0];
                   
-                  BattleQuest battleQuest = new BattleQuest();
+                    foreach (Quest quest in playerData.AcceptedQuests)
+                    {
+                        if (quest.QuestLocation.LocationName == battleQuest.QuestLocation.LocationName)
+                        {
+                            again = true;
+                        }
+                    }
 
+                    foreach (Nest nest in trueNestList)
+                    {
+                        if (nest.LocationName == battleQuest.QuestLocation.LocationName)
+                        {
+                            again = true;
+                        }
+                    }
                    
-                } while (playerData.AcceptedQuests.Contains(quest));
-           
+                } while (again);
+                quests.Add(battleQuest);
             }
-        }
-            // if(playerData.AcceptedQuests.Count > 0)
-            // {
-            //     
-            
-            
-        }
+            else{
+                quests.Add(new DeliveryQuest());
+            }
+        }     
     }
+}
 
 
