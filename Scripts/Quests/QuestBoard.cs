@@ -41,12 +41,13 @@ namespace Sands
                 
             }
 
-            if(trueNestList.Count > 0) {
-                BattleQuest battleQuest = new BattleQuest();
+            if(trueNestList.Count != 3) {
+                BattleQuest battleQuest;
                 bool again = false;
                 do{
-
-                  //only generate a battleQuest with available NestDB locations
+                    again = false;
+                    battleQuest = new BattleQuest();
+                    //only generate a battleQuest with available NestDB locations
                   
                     foreach (Quest quest in playerData.AcceptedQuests)
                     {
