@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class LocationDB : MonoBehaviour {
+    public static class LocationDB {
 
         private static List<Location> locations = new List<Location>();
 
-        void Start() {
-            BuildClassDatabase();
-        }
+        
 
-        void BuildClassDatabase() 
+        static LocationDB() 
         {
             locations = new List<Location>() {
                 //string locationName, double latitude, double longitude, int territory, int[] nearbyTowns
@@ -31,17 +29,17 @@ namespace Sands {
     
 
         //get database
-        public List<Location> getLocationList() {
+        public static List<Location> getLocationList() {
             return locations;
         }
 
         //get Armor at position
-        public Location getLocation(int position) {
+        public static Location getLocation(int position) {
             return locations[position];
         }
 
         //clear
-        public void clearLocationList() {
+        public static void clearLocationList() {
             locations.Clear();
         }
 
