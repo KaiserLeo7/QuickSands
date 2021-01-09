@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class LocationDB {
+    public class LocationDB : MonoBehaviour {
 
         private static List<Location> locations = new List<Location>();
 

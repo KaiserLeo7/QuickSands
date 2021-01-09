@@ -27,7 +27,7 @@ namespace Sands
         public Vendor(string name, string locationName, double latt, double longtitude)
         {
             this.name = name;
-            location = new Location(locationName, latt, longtitude);
+       //     location = new Location(locationName, latt, longtitude);
         }
 
     }
