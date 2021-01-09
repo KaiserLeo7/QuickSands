@@ -4,17 +4,17 @@ using UnityEngine;
 
 namespace Sands
 {
-    public class TradeableDatabase
+    public static class TradeableDatabase
     {
         private static List<Tradeable> tradeables = new List<Tradeable>();
 
         //get database
-        public List<Tradeable> getTradeableList()
+        public static List<Tradeable> getTradeableList()
         {
             return tradeables;
         }
 
-        void BuildClassDatabase()
+        static TradeableDatabase()
         {
             tradeables = new List<Tradeable>() {
                 //string itemName, int weight, double price
@@ -32,13 +32,13 @@ namespace Sands
         }
 
         //get Hero at position
-        public Tradeable getTradeable(int position)
+        public static Tradeable getTradeable(int position)
         {
             return tradeables[position];
         }
 
         //clear
-        public void clearTradeableList()
+        public static void clearTradeableList()
         {
             tradeables.Clear();
         }

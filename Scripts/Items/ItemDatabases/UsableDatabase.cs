@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace Sands
 {
-    public class UsableDatabase
+    public static class UsableDatabase
     {
 
         private static List<Usable> usables = new List<Usable>();
 
         //get database
-        public List<Usable> getUsableList()
+        public static List<Usable> getUsableList()
         {
             return usables;
         }
 
-        void BuildClassDatabase()
+        static UsableDatabase()
         {
             usables = new List<Usable>() {
                 //int ID, string itemName, int weight, double price, int effectAmount
@@ -25,7 +25,7 @@ namespace Sands
         }
 
         //get Hero at position
-        public Usable getUsable(int position)
+        public static Usable getUsable(int position)
         {
             return usables[position];
         }

@@ -3,15 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Sands {
-    public class HeroClassDB : MonoBehaviour {
+    public static class HeroClassDB {
 
         public static List<Hero> heroes = new List<Hero>();
 
-        void Start() {
-            BuildClassDatabase();
-        }
-
-        void BuildClassDatabase() 
+        static HeroClassDB() 
         {
             heroes = new List<Hero>() {
                 //adding all 3 types off heroes to sample class
@@ -23,17 +19,17 @@ namespace Sands {
         }
 
         //get database
-        public List<Hero> getHeroList() {
+        public static List<Hero> getHeroList() {
             return heroes;
         }
 
         //get Hero at position
-        public Hero getHero(int position) {
+        public static Hero getHero(int position) {
           return heroes[position];
         }
 
         //clear
-        public void clearHeroList() {
+        public static void clearHeroList() {
             heroes.Clear();
         }
     }

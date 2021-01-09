@@ -6,9 +6,7 @@ namespace Sands
 {
     public class DeliveryQuest : Quest
     {
-        private LocationDB locationDB = new LocationDB();
         private System.Random random = new System.Random();
-        private TradeableDatabase tradeableDatabase = new TradeableDatabase();
         private PlayerData playerData = new PlayerData();
         private Tradeable chosenTradeable;
         //parallel array of item delivery amounts based on tradeable id
@@ -17,12 +15,12 @@ namespace Sands
         public DeliveryQuest()
         {
             //chooses a random tradable from the database
-            chosenTradeable = tradeableDatabase.getTradeable(random.Next(1, 11));
+            chosenTradeable = TradeableDatabase.getTradeable(random.Next(1, 11));
 
             //if current location is the same as the chosen one find another
             do
             {
-                questLocation = locationDB.getLocation(random.Next(1, 11));
+                questLocation = LocationDB.getLocation(random.Next(1, 11));
             } while (questLocation.LocationName == playerData.CurrentLocation.LocationName);
 
             //description based on other parameters

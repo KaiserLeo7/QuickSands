@@ -5,18 +5,18 @@ using UnityEngine;
 
 namespace Sands
 {
-    public class ArmorDatabase
+    public static class ArmorDatabase
     {
 
         private static List<Armor> armors = new List<Armor>();
 
         //get database
-        public List<Armor> getArmorList()
+        public static List<Armor> getArmorList()
         {
             return armors;
         }
 
-        void BuildClassDatabase()
+        static ArmorDatabase()
         {
             armors = new List<Armor>() {
                 //int id, int health, double defence, string itemName, int weight, double price, int hero
@@ -38,18 +38,18 @@ namespace Sands
             };
         }
         //get Armor at position
-        public Item getArmor(int position)
+        public static Item getArmor(int position)
         {
             return armors[position];
         }
 
-        public Item getArmor(string itemName)
+        public static Item getArmor(string itemName)
         {
             return armors.Single(i => i.ItemName == itemName);
         }
 
         //clear
-        public void clearArmorList()
+        public static void clearArmorList()
         {
             armors.Clear();
         }

@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace Sands
 {
-    public class WeaponDatabase
+    public static class WeaponDatabase
     {
 
         private static List<Weapon> weapons = new List<Weapon>();
 
         //get database
-        public List<Weapon> getWeaponList()
+        public static List<Weapon> getWeaponList()
         {
             return weapons;
         }
 
-        void BuildClassDatabase()
+        static WeaponDatabase()
         {
             weapons = new List<Weapon>() {
                 //int ID, int damage, double crit, string itemName, double weight, double price, int hero
@@ -38,7 +38,7 @@ namespace Sands
         }
 
         //get Hero at position
-        public Weapon getWeapon(int position)
+        public static Weapon getWeapon(int position)
         {
             return weapons[position];
         }
