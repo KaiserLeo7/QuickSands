@@ -14,5 +14,28 @@ namespace Sands
             this.currentLocation = player.CurrentLocation;
             this.acceptedQuests = player.AcceptedQuests;
         }
+
+        public PlayerData(NestDB nestDB){
+
+           
+        }
+
+        public Location CurrentLocation {
+            get {
+                return currentLocation;
+            }
+            set {
+                currentLocation = value;
+            }
+        }
+
+        public List<Quest> AcceptedQuests {
+            get {
+                return acceptedQuests;
+            }
+            set {
+                acceptedQuests = value;
+            }
+        }
     }
 }

@@ -42,5 +42,18 @@ namespace Sands {
             return acceptedQuests[position];
         }
 
+        public void SavePlayer() {
+
+            SaveSystem.SavePlayer(this);
+        }
+
+        public void LoadPlayer() {
+
+            PlayerData data = SaveSystem.LoadPlayer();
+
+            this.CurrentLocation = data.CurrentLocation;
+
+            this.AcceptedQuests = data.AcceptedQuests;
+        }
     }
 }  
