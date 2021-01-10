@@ -7,12 +7,12 @@ namespace Sands
 {
     public class BattleQuest : Quest
     {
-        private NestDB nestDB = new NestDB();
+       
         private System.Random random = new System.Random();
         private PlayerData playerData = new PlayerData();
         public BattleQuest()
         {
-            this.questLocation = nestDB.getNest(random.Next(0, 3));
+            this.questLocation = NestDB.getNest(random.Next(0, 3));
             this.questDescription = "Defeat the " + questLocation.LocationName + " Nest";
 
             if (playerData.CurrentLocation.Territory != questLocation.Territory)

@@ -10,7 +10,6 @@ namespace Sands
         private List<Quest> quests = new List<Quest>();
         private System.Random random = new System.Random();
         private BattleQuest battleQuest;
-        private NestDB nestDB = new NestDB();
        
         public void populateQuestList()
         {
@@ -22,7 +21,7 @@ namespace Sands
             List<Nest> falseNestList = new List<Nest>();
 
             //get the list of nests
-            foreach (Nest nest in nestDB.getNestList())
+            foreach (Nest nest in NestDB.getNestList())
             {
                 //check if any nests are false
                 if (!nest.ActiveStatus)
