@@ -7,7 +7,7 @@ namespace Sands
     public class DeliveryQuest : Quest
     {
         private System.Random random = new System.Random();
-        private PlayerData playerData = new PlayerData();
+        private Player player = new Player();
         private Tradeable chosenTradeable;
         //parallel array of item delivery amounts based on tradeable id
         private int[] amount = new int[] { 50, 45, 40, 35, 30, 25, 20, 15, 10, 5 };
@@ -21,7 +21,7 @@ namespace Sands
             do
             {
                 questLocation = LocationDB.getLocation(random.Next(1, 11));
-            } while (questLocation.LocationName == playerData.CurrentLocation.LocationName);
+            } while (questLocation.LocationName == player.CurrentLocation.LocationName);
 
             //description based on other parameters
             this.questDescription = "Deliver " + amount[questLocation.Id - 1] + " of " + chosenTradeable.ItemName + "to " + questLocation.LocationName;
@@ -31,7 +31,7 @@ namespace Sands
 
             //price based on the location distance
                 //checks if the locations are connected
-            foreach (int location in playerData.CurrentLocation.NearbyTowns)
+            foreach (int location in player.CurrentLocation.NearbyTowns)
             {
                 if (questLocation.Id == location)
                 {
@@ -49,7 +49,7 @@ namespace Sands
             else
             {
                 //if they're NOT in the same territory
-                if (playerData.CurrentLocation.Territory != questLocation.Territory)
+                if (player.CurrentLocation.Territory != questLocation.Territory)
                 {
                     this.questReward = random.Next(400, 501);
                     this.distanceNote = "Far away";

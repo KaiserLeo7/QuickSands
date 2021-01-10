@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class PlayerData : MonoBehaviour {
+    public class Player : MonoBehaviour {
 
         private static Location currentLocation;
         private static List<Quest> acceptedQuests = new List<Quest>();
 
         //ADD A PART THAT CHECKS IF IT'S THE FIRST TIME THE GAME IS STARTING
-        private bool[] nestsStatus = new bool[3];
-        public PlayerData() {}
+        //private bool[] nestsStatus = new bool[3];
+        public Player() {}
 
        
         public Location CurrentLocation {

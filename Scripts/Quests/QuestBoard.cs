@@ -6,7 +6,7 @@ namespace Sands
 {
     public class QuestBoard
     {
-        private PlayerData playerData = new PlayerData();
+        private Player player = new Player();
         private List<Quest> quests = new List<Quest>();
         private System.Random random = new System.Random();
         private BattleQuest battleQuest;

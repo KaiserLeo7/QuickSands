@@ -9,13 +9,13 @@ namespace Sands
     {
        
         private System.Random random = new System.Random();
-        private PlayerData playerData = new PlayerData();
+        private Player player = new Player();
         public BattleQuest()
         {
             this.questLocation = NestDB.getNest(random.Next(0, 3));
             this.questDescription = "Defeat the " + questLocation.LocationName + " Nest";
 
-            if (playerData.CurrentLocation.Territory != questLocation.Territory)
+            if (player.CurrentLocation.Territory != questLocation.Territory)
             {
                 /////////IF DOESN'T WORK REMOVE MULTIPLIER IT'S ABOUT DOWNCASTING A PARENT TO A CHILD LOCATION TO NEST
                 this.questReward = random.Next(400*((Nest)this.questLocation).Multiplier, 501*((Nest)this.questLocation).Multiplier);
@@ -36,7 +36,7 @@ namespace Sands
             Nest nest = (Nest)this.questLocation;
             this.questDescription = "Defeat the " + questLocation.LocationName + " Nest";
 
-            if (playerData.CurrentLocation.Territory != questLocation.Territory)
+            if (player.CurrentLocation.Territory != questLocation.Territory)
             {
                 /////////IF DOESN'T WORK REMOVE MULTIPLIER IT'S ABOUT DOWNCASTING A PARENT TO A CHILD LOCATION TO NEST
                 this.questReward = random.Next(400*nest.Multiplier, 501*nest.Multiplier);
