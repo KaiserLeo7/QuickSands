@@ -4,15 +4,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Sands
 {   
+   
     public static class SaveSystem
     {
+        static string path = Application.persistentDataPath + "/player.savefile";
 
         public static void SavePlayer(Player player) {
 
             BinaryFormatter formatter = new BinaryFormatter();
 
-            string path = Application.persistentDataPath + "/player.savefile";
-
+          
             FileStream stream = new FileStream(path, FileMode.Create);
             
             PlayerData data = new PlayerData(player);
@@ -25,7 +26,20 @@ namespace Sands
 
         public static PlayerData LoadPlayer() {
 
-            
+            if (File.Exists(path))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream stream = new FileStream(path, FileMode.Open);
+                
+                PlayerData data = formatter.Deserialize(stream) as PlayerData;
+                stream.Close();
+
+                return data;
+
+            } else {
+
+                Debug.LogError("Save file not found in " + path);
+            }
         }
     }
 }
