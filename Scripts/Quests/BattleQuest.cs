@@ -10,9 +10,10 @@ namespace Sands
        
         private System.Random random = new System.Random();
         private Player player = new Player();
+        private NestList nestList = new NestList();
         public BattleQuest()
         {
-            this.questLocation = NestDB.getNest(random.Next(0, 3));
+            this.questLocation = nestList.getNest(random.Next(0, 3));
             this.questDescription = "Defeat the " + questLocation.LocationName + " Nest";
 
             if (player.CurrentLocation.Territory != questLocation.Territory)

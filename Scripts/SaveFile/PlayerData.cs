@@ -9,6 +9,7 @@ namespace Sands
     {
         private Location currentLocation;
         private List<Quest> acceptedQuests;
+        private List<Nest> nests = new List<Nest>();
 
         public PlayerData(){
             
@@ -17,12 +18,10 @@ namespace Sands
         public PlayerData(Player player){
             this.currentLocation = player.CurrentLocation;
             this.acceptedQuests = player.AcceptedQuests;
-
         }
 
-        public PlayerData(bool [] nestsStatus){
-            this.nestsStatus[] = nestsStatus;
-           
+        public PlayerData(NestList nestList){
+            this.nests = nestList.getNestList();
         }
 
         public Location CurrentLocation {
@@ -40,6 +39,15 @@ namespace Sands
             }
             set {
                 acceptedQuests = value;
+            }
+        }
+
+        public List<Nest> Nests {
+            get {
+                return nests;
+            }
+            set {
+                nests = value;
             }
         }
     }

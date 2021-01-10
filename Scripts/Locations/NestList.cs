@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public static class NestDB {
+    public class NestList {
 
         private static List<Nest> nests = new List<Nest>();
 
 
-        static NestDB() 
+        public NestList() 
         {
             //int id, string name, double lattitude, double longtitude, int territory, int[] nearbyTowns //multiplier
             nests = new List<Nest>() {
@@ -23,17 +23,17 @@ namespace Sands {
     
 
         //get database
-        public static List<Nest> getNestList() {
+        public List<Nest> getNestList() {
             return nests;
         }
 
      
-        public static Nest getNest(int position) {
+        public Nest getNest(int position) {
             return nests[position];
         }
 
         //clear
-        public static void clearNestList() {
+        public void clearNestList() {
             nests.Clear();
         }
 
