@@ -8,6 +8,28 @@ namespace Sands
     public static class SaveSystem
     {
         static string path = Application.persistentDataPath + "/player.savefile";
+        static PlayerData data;
+
+        static SaveSystem() {
+            data = new PlayerData();
+
+
+        }
+
+public static SaveAll(){
+
+ SavePlayer(Player player)
+ SaveNest(Nest Nest)
+ SaveVehicles(Vehicles vehicles)
+
+}
+
+
+LoadAll {
+
+
+
+}
 
         public static void SavePlayer(Player player) {
 
@@ -16,7 +38,8 @@ namespace Sands
           
             FileStream stream = new FileStream(path, FileMode.Create);
             
-            PlayerData data = new PlayerData(player);
+            data.AcceptedQuests = player.AcceptedQuests;
+            data.CurrentLocation = player.CurrentLocation;
 
             formatter.Serialize(stream, data);
             stream.Close();
