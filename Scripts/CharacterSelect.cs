@@ -29,5 +29,5 @@ namespace Sands
          Hero mage = hero.getHero(2);
          party.addHero(mage);
     }
-
+    }
 }
