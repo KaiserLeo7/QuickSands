@@ -21,5 +21,10 @@ namespace Sands {
         public void clearHeroList() {
             heroParty.Clear();
         }
+
+        //add a hero to the party
+        public void addHero(Hero hero) {
+            heroParty.add(hero);
+        }
     }
 }
