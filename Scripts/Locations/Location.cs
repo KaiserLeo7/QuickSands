@@ -5,26 +5,41 @@ using UnityEngine;
 namespace Sands
 {
 
-    public class Location {
+    public class Location : MonoBehaviour
+    {
 
-    private int id;
-    private string locationName;
-    private double latitude;
-    private double longitude;
-    private int[] nearbyTowns;
-    private int territory;
+        private int id;
+        private string locationName;
+        private double latitude;
+        private double longitude;
+        private int[] nearbyTowns;
+        private int territory;
+        private List<double> tradePrices;
 
-    public Location(){}
-    public Location(int id, string locationName, double latitude, double longitude, int territory, int[] nearbyTowns) {
-        this.id = id;
-        this.locationName = locationName;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.territory = territory;
-        this.nearbyTowns = nearbyTowns;
-    }
+        public Location() { }
+        public Location(int id, string locationName, double latitude, double longitude, int territory, int[] nearbyTowns)
+        {
+            this.id = id;
+            this.locationName = locationName;
+            this.latitude = latitude;
+            this.longitude = longitude;
+            this.territory = territory;
+            this.nearbyTowns = nearbyTowns;
+            this.tradePrices = new List<double>();
+        }
 
-        public int Id {
+        public Location(LocationMemento locationMemento)
+        {
+            this.id = locationMemento.Id;
+            this.locationName = locationMemento.LocationName;
+            this.latitude = locationMemento.Latitude;
+            this.longitude = locationMemento.Longitude;
+            this.nearbyTowns = locationMemento.NearbyTowns;
+            this.territory = locationMemento.Territory;
+        }
+        
+        public int Id
+        {
             get
             {
                 return id;
@@ -34,8 +49,9 @@ namespace Sands
                 id = value;
             }
         }
-        
-        public string LocationName {
+
+        public string LocationName
+        {
             get
             {
                 return locationName;
@@ -48,7 +64,7 @@ namespace Sands
 
         public double Latitude
         {
-            get 
+            get
             {
                 return latitude;
             }
@@ -58,7 +74,8 @@ namespace Sands
             }
         }
 
-        public double Longitude {
+        public double Longitude
+        {
             get
             {
                 return longitude;
@@ -71,7 +88,7 @@ namespace Sands
 
         public int Territory
         {
-            get 
+            get
             {
                 return territory;
             }
@@ -83,13 +100,24 @@ namespace Sands
 
         public int[] NearbyTowns
         {
-            get 
+            get
             {
                 return nearbyTowns;
             }
             set
             {
                 nearbyTowns = value;
+            }
+        }
+
+        public List<double> TradePrices{
+            get
+            {
+                return tradePrices;
+            }
+            set
+            {
+                tradePrices = value;
             }
         }
     }

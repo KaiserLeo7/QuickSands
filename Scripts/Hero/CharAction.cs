@@ -11,12 +11,9 @@ namespace Sands {
     public class CharAction : MonoBehaviour {
 
         private CharAnimation charAnim;
-        public SkeletonMecanim skeleton;
 
         private State state;
-        private Vector3 slideTargetPosition;
 
-        private Action onSlideComplete;
         private Action onAttackComplete;
         private Action onHealComplete;
 
@@ -26,7 +23,6 @@ namespace Sands {
 
         private enum State {
             Idle,
-            Sliding,
             BusyAttacking,
             BusyHealing,
         }
@@ -36,36 +32,17 @@ namespace Sands {
             state = State.Idle;
 
             charAnim = GetComponent<CharAnimation>();
-            skeleton = GetComponent<SkeletonMecanim>();
         }
 
         private void Start() {
         }
 
-        public void Setup(bool isPlayerTeam) {
+        public void PlayIdleAnim() {
 
-            if (isPlayerTeam)
-            {
-                charAnim.IdleAnim();
-            }
-            else {
-                //play idle animation
-                charAnim.IdleAnim();
-
-                ////create a new skin class variable
-                ////assign a skin to it
-                ////add it's other attachments to the set
-                //Skin enemySkin = new Skin("enemySkin");
-                //Skin shadow = skeleton.skeleton.Data.FindSkin("e5");
-                //enemySkin.AddAttachments(shadow);
-
-                ////set the skin to the skeleton model
-                ////attach everything
-                //skeleton.skeleton.SetSkin(enemySkin);
-                //skeleton.skeleton.SetSlotsToSetupPose();
-            }
+            charAnim.IdleAnim();
         }
 
+        //check every frame
         private void Update() {
             switch (state) {
                 case State.Idle:
@@ -80,61 +57,47 @@ namespace Sands {
                         onHealComplete();
                     }
                     break;
-                case State.Sliding:
-                    float slideSpeed = 5f;
-                    transform.position += (slideTargetPosition - GetPosition()) * slideSpeed * Time.deltaTime;
-
-                    float reachedDistance = 1f;
-                    if (Vector3.Distance(GetPosition(), slideTargetPosition) < reachedDistance) {
-                        // Arrived at Slide Target Position
-                        transform.position = slideTargetPosition;
-                        onSlideComplete();
-                    }
-                    break;
             }
         }
 
-        //helper function gets position
-        public Vector3 GetPosition() {
-            return transform.position;
-        }
-
-        public void Attack(CharAction targetCharacter, Action onAttackComplete) {
-            
-            slideTargetPosition = Vector3.Lerp(GetPosition(), targetCharacter.GetPosition(), 0.8f);
-            Vector3 startingPosition = GetPosition();
+   
 
 
-            //Slide to Target
-            SlideToPosition(slideTargetPosition, () => {
-                //Arrive at Target, attack him
-                state = State.BusyAttacking;
-                charAnim.AttackAnim();
 
-                //call a function from BattleSystem to calculate damage
-            BattleSystem.instance.CalculateDamage();
 
-                attackEndTime = Time.time + .8f;
+        //Allows for the execution of either a moving or still attack by either Hero Units
+        public void Attack( Action onAttackComplete) {
 
-                this.onAttackComplete = () => {
+           
+            //Attack Target
+            state = State.BusyAttacking;
+            charAnim.AttackAnim();
+
+            //call a function from BattleSystem to calculate damage
+            BattleSystem2.instance.CalculateDamage();
+
+            attackEndTime = Time.time + .8f;
+
+            this.onAttackComplete = () => {
                     
-                    //Attack completed, slide back
-                    SlideToPosition(startingPosition, () => {
-                        state = State.Idle;
+                state = State.Idle;
 
-                        onAttackComplete();
-                    });
-                };
-            });
-            
+                onAttackComplete();
+            };
         }
+   
+
+
 
         public void Heal(Action onHealComplete) {
+            
             state = State.BusyHealing;
+            
             //Trigger a healing animation
             charAnim.HealAnim();
-        //calculate the healing
-        BattleSystem.instance.CalculateHeal();
+        
+            //calculate the healing
+            BattleSystem2.instance.CalculateHeal();
 
             healEndTime = Time.time + .5f;
 
@@ -145,20 +108,8 @@ namespace Sands {
             };
         }
 
-        private void SlideToPosition(Vector3 slideTargetPosition, Action onSlideComplete) {
-            this.slideTargetPosition = slideTargetPosition;
-            this.onSlideComplete = onSlideComplete;
 
 
-
-            ////hey doofus you need to add slide left and slide right animetions then trigger them with this code:
-            /// if(slideTargetPosition.x > 0) { charAnim.PlaySlideRight();} else { charAnim.PlaySlideLeft(); }
-            ///
-
-
-
-            state = State.Sliding;
-        }
 
     }
 }

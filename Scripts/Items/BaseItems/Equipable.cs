@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Sands
 {
+    [System.Serializable]
     public class Equipable : Item
     {
         private bool equipped { get; set; }

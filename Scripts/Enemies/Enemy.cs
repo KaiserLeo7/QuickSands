@@ -4,20 +4,20 @@ using UnityEngine;
 
 namespace Sands
 {
-    public class Enemy
+    public class Enemy : MonoBehaviour
     {
         private int id;
         private int damage;
         private int critChance;
-        private int maxHealth;
-        private int currentHealth;
+        private int maxHP;
+        private int currentHP;
 
-        public Enemy(int id, int damage, int critChance, int maxHealth, int currentHealth) {
+        public Enemy(int id, int damage, int critChance, int maxHP, int currentHP) {
             this.id = id;
             this.damage = damage;
             this.critChance = critChance;
-            this.maxHealth = maxHealth;
-            this.currentHealth = currentHealth;
+            this.maxHP = maxHP;
+            this.currentHP = currentHP;
         }
 
         /////////// GETTERS AND SETTERS //////////
@@ -47,27 +47,27 @@ namespace Sands
         }
 
 
-        public int MaxHealth
+        public int MaxHP
         {
             get
             {
-                return maxHealth;
+                return maxHP;
             }
             set
             {
-                maxHealth = value;
+                maxHP = value;
             }
         }
 
-        public int CurrentHealth
+        public int CurrentHP
         {
             get
             {
-                return currentHealth;
+                return  currentHP;
             }
             set
             {
-                currentHealth = value;
+                currentHP = value;
             }
         }
         

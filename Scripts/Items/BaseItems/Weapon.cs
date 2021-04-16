@@ -2,15 +2,23 @@ using UnityEngine;
 
 namespace Sands
 {
+    [System.Serializable]
     public class Weapon : Equipable
     {
         private int damage { get; set; }
-        private int crit { get; set; }
 
-        public Weapon(int ID, int damage, int crit, string itemName, int weight, double price, int hero) : base(ID, itemName, weight, price, hero)
+        public Weapon(int ID, int damage, string itemName, int weight, double price, int hero) : base(ID, itemName, weight, price, hero)
         {
             this.damage = damage;
-            this.crit = crit;
+        }
+
+        public int Damage{
+            get{
+                return damage;
+            }
+            set{
+                damage = value;
+            }
         }
     }
 }

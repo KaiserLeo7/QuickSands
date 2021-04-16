@@ -6,9 +6,7 @@ namespace Sands
 {
     public class QuestBoard
     {
-        private Player player = new Player();
         private List<Quest> quests = new List<Quest>();
-        private NestList nestList = new NestList();
         private System.Random random = new System.Random();
         private BattleQuest battleQuest;
        
@@ -22,7 +20,7 @@ namespace Sands
             List<Nest> falseNestList = new List<Nest>();
 
             //get the list of nests
-            foreach (Nest nest in nestList.getNestList())
+            foreach (Nest nest in NestDB.getNestList())
             {
                 //check if any nests are false
                 if (!nest.ActiveStatus)

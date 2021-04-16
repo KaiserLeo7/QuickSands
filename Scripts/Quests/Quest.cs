@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Sands {
-    public class Quest : MonoBehaviour {
+    [System.Serializable]
+    public class Quest {
         protected string questDescription;
         
         protected Location questLocation;

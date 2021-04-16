@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Sands
 {
+    [System.Serializable]
     public class Usable : Item
     {
         private int effectAmount { get; set; }

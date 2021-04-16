@@ -8,6 +8,5 @@ namespace Sands
     {
         public EnemyFlying(int id, int damage, int critChance, int maxHealth, int currentHealth) : base(id, damage, critChance, maxHealth, currentHealth) { }
 
-        //What is special about mooks?
     }
 }

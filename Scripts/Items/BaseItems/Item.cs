@@ -2,7 +2,8 @@
 
 namespace Sands
 {
-    public class Item : MonoBehaviour
+    [System.Serializable]
+    public class Item
     {
         int id;
         private string itemName;

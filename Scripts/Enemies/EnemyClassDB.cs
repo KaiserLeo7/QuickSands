@@ -4,17 +4,12 @@ using System.Linq;
 using UnityEngine;
 
 namespace Sands {
-    public class EnemyClassDB {
+    public static class EnemyClassDB {
 
-        private static List<Enemy> enemies = new List<Enemy>();
+        private static List<Enemy> enemies;
 
 
-    void Start() {
-        BuildClassDatabase();
-    }
-
-    void BuildClassDatabase() 
-    {
+    static EnemyClassDB(){
         enemies = new List<Enemy>() {
            //int id, int damage, int critChance, int maxHealth, int currentHealth
         new EnemyGround(1,200, 10, 750, 750),
@@ -24,17 +19,17 @@ namespace Sands {
     }
     
         //get database
-        public List<Enemy> getEnemyList() {
+        public static List<Enemy> getEnemyList() {
             return enemies;
         }
 
         //get Hero at position
-        public Enemy getEnemy(int position) {
+        public static Enemy getEnemy(int position) {
             return enemies[position];
         }        
 
         //clear
-        public void clearEnemyList() {
+        public static void clearEnemyList() {
             enemies.Clear();
         }
 

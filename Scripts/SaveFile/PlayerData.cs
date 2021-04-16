@@ -7,29 +7,50 @@ namespace Sands
     [System.Serializable]
     public class PlayerData
     {
-        private Location currentLocation;
+        
+        //the parties current location
+        private LocationMemento currentLocation;
+        private LocationMemento locationToTravelTo;
+
+        //a list of accepted quests
         private List<Quest> acceptedQuests;
-        private List<Nest> nests = new List<Nest>();
 
-        public PlayerData(){
-            
-        }
+        //your parties current vehicle
+        private VehicleMemento currentVehicle;
 
-        public PlayerData(Player player){
-            this.currentLocation = player.CurrentLocation;
-            this.acceptedQuests = player.AcceptedQuests;
-        }
+        //a check for if you have a vehicle
+        private bool hasVehicle;
 
-        public PlayerData(NestList nestList){
-            this.nests = nestList.getNestList();
-        }
+        //a list of nests that tell us if theyre active or not
+        private List<NestMemento> nests = new List<NestMemento>();
+        
+        //a list of your partys heroes
+        private List<HeroMemento> heroParty = new List<HeroMemento>();
 
-        public Location CurrentLocation {
+        //player inventory
+        private List<InventoryTradeable> playerTradeableInventory;
+
+        private double playerMoney;
+
+        //empty constructor
+        public PlayerData(){ }
+
+        //Getters and setters
+        public LocationMemento CurrentLocation {
             get {
                 return currentLocation;
             }
             set {
                 currentLocation = value;
+            }
+        }
+
+        public LocationMemento LocationToTravelTo {
+            get {
+                return locationToTravelTo;
+            }
+            set {
+                locationToTravelTo = value;
             }
         }
 
@@ -41,13 +62,58 @@ namespace Sands
                 acceptedQuests = value;
             }
         }
+        
+        public VehicleMemento CurrentVehicle {
+            get {
+                return currentVehicle;
+            }
+            set {
+                currentVehicle = value;
+            }
+        }
 
-        public List<Nest> Nests {
+        public bool HasVehicle {
+            get {
+                return hasVehicle;
+            }
+            set {
+                hasVehicle = value;
+            }
+        }
+
+        public List<NestMemento> Nests {
             get {
                 return nests;
             }
             set {
                 nests = value;
+            }
+        }
+
+        public List<HeroMemento> HeroParty {
+            get {
+                return heroParty;
+            }
+            set {
+                heroParty = value;
+            }
+        }
+
+        public List<InventoryTradeable> PlayerTradeableInventory{
+            get{
+                return playerTradeableInventory;
+            }
+            set{
+                playerTradeableInventory = value;
+            }
+        }
+
+        public double PlayerMoney {
+            get {
+                return playerMoney;
+            }
+            set {
+                playerMoney = value;
             }
         }
     }
