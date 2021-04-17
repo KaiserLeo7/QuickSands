@@ -6,12 +6,16 @@ using System.IO;
 
 public class SceneChange : MonoBehaviour
 {
-    public void NewGame() {
-        File.Delete(Application.persistentDataPath + "/player.savefile");
-        SceneManager.LoadScene("CharSelect");
-    }
+  public void NewGame()
+  {
+    File.Delete(Application.persistentDataPath + "/player.savefile");
+    Sands.SaveSystem.Pdata = new Sands.PlayerData();
+    Sands.SaveSystem.LoadAll();
+    Sands.SaveSystem.SaveAll();
+    SceneManager.LoadScene("CharSelect");
+  }
 
-    public void NewGame2()
+  public void NewGame2()
     {
       if(!File.Exists(Application.persistentDataPath + "/player.savefile"))
           SceneManager.LoadScene("CharSelect");
